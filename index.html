@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affinity | Señales institucionales premium</title>
+  <meta name="description" content="Affinity: señales institucionales premium, comunidad privada, resultados visibles y tecnología para XAUUSD y Volatility 75." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bg: '#04050a',
+            bgSoft: '#080b13',
+            panel: '#0c1018',
+            line: 'rgba(255,255,255,0.08)',
+            soft: '#9aa4b5',
+            affinityCyan: '#38c9d3',
+            affinityBlue: '#6789c0',
+            affinityPurple: '#493585',
+            affinityLavender: '#b08dce',
+            affinityPink: '#8f47a9'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            deep: '0 32px 120px rgba(0,0,0,0.48)',
+            purple: '0 22px 72px rgba(143,71,169,0.24)',
+            soft: '0 18px 50px rgba(0,0,0,0.28)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg: #04050a;
+      --bg2: #070913;
+      --panel: rgba(11, 14, 23, 0.88);
+      --line: rgba(255,255,255,0.08);
+      --soft: #9aa4b5;
+      --white: #ffffff;
+      --cyan: #38c9d3;
+      --blue: #6789c0;
+      --purple: #493585;
+      --lavender: #b08dce;
+      --pink: #8f47a9;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(56,201,211,0.09), transparent 22%),
+        radial-gradient(circle at 86% 8%, rgba(143,71,169,0.16), transparent 26%),
+        radial-gradient(circle at 50% 100%, rgba(103,137,192,0.08), transparent 30%),
+        linear-gradient(180deg, #04050a 0%, #060913 36%, #04050a 100%);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      width: min(100%, 1460px);
+      margin-inline: auto;
+      padding-inline: 18px;
+    }
+
+    @media (min-width: 768px) {
+      .wrap { padding-inline: 30px; }
+    }
+
+    @media (min-width: 1280px) {
+      .wrap { padding-inline: 40px; }
+    }
+
+    .glass-nav {
+      background: rgba(4, 5, 10, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.026) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.026) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: radial-gradient(circle at center, black 32%, transparent 82%);
+      -webkit-mask-image: radial-gradient(circle at center, black 32%, transparent 82%);
+      opacity: 0.24;
+      pointer-events: none;
+    }
+
+    .noise {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.05;
+      background-image: radial-gradient(rgba(255,255,255,.32) .8px, transparent .8px);
+      background-size: 22px 22px;
+      mix-blend-mode: soft-light;
+    }
+
+    .orb-cyan,
+    .orb-pink,
+    .orb-blue {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(26px);
+      pointer-events: none;
+    }
+
+    .orb-cyan {
+      background: radial-gradient(circle, rgba(56,201,211,.22) 0%, rgba(56,201,211,.06) 38%, transparent 72%);
+    }
+
+    .orb-pink {
+      background: radial-gradient(circle, rgba(143,71,169,.22) 0%, rgba(143,71,169,.06) 40%, transparent 74%);
+    }
+
+    .orb-blue {
+      background: radial-gradient(circle, rgba(103,137,192,.18) 0%, rgba(103,137,192,.06) 40%, transparent 74%);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #d6dbe5;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      line-height: 1;
+      box-shadow: 0 10px 34px rgba(0,0,0,.18);
+    }
+
+    .eyebrow i {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      display: inline-block;
+      background: linear-gradient(135deg, var(--cyan), var(--pink));
+      box-shadow: 0 0 18px rgba(176,141,206,.5);
+    }
+
+    .title-gradient {
+      background: linear-gradient(135deg, #ffffff 0%, #e0fcff 18%, #38c9d3 38%, #6789c0 56%, #b08dce 78%, #8f47a9 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .soft-text { color: var(--soft); }
+
+    .panel {
+      position: relative;
+      background: linear-gradient(180deg, rgba(12,16,24,0.86), rgba(7,9,15,0.98));
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 22px 80px rgba(0,0,0,.40);
+      overflow: hidden;
+    }
+
+    .panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.04), transparent 24%);
+      pointer-events: none;
+    }
+
+    .outline-gradient {
+      position: relative;
+    }
+
+    .outline-gradient::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(56,201,211,.16), rgba(176,141,206,.14), rgba(143,71,169,.18));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .premium-btn,
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 24px;
+      min-height: 54px;
+      border-radius: 18px;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      transition: transform .24s ease, box-shadow .24s ease, background .24s ease, border-color .24s ease, opacity .24s ease;
+      text-align: center;
+    }
+
+    .premium-btn:hover,
+    .secondary-btn:hover,
+    .lift:hover { transform: translateY(-3px); }
+
+    .premium-btn {
+      color: #fff;
+      background: linear-gradient(135deg, #5b8ad2 0%, #6a67bf 38%, #8f47a9 100%);
+      box-shadow: 0 16px 46px rgba(143,71,169,.28);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .secondary-btn {
+      color: #fff;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 12px 30px rgba(0,0,0,.16);
+    }
+
+    .badge-small {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      color: #d6dbe5;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .section-kicker {
+      color: var(--lavender);
+      text-transform: uppercase;
+      letter-spacing: .24em;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .divider-glow {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, rgba(176,141,206,.24), rgba(56,201,211,.24), transparent);
+    }
+
+    .blur-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.06);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .feature-card,
+    .quote-card,
+    .step-card,
+    .pricing-card,
+    .soon-card,
+    .stat-card,
+    .mini-result {
+      transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+    }
+
+    .feature-card:hover,
+    .quote-card:hover,
+    .step-card:hover,
+    .pricing-card:hover,
+    .soon-card:hover,
+    .stat-card:hover,
+    .mini-result:hover {
+      transform: translateY(-5px);
+      border-color: rgba(176,141,206,.20);
+      box-shadow: 0 22px 60px rgba(0,0,0,.32);
+    }
+
+    .result-number {
+      background: linear-gradient(135deg, #38c9d3 0%, #6789c0 35%, #b08dce 65%, #8f47a9 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .telegram-card {
+      position: relative;
+      background: radial-gradient(circle at left, rgba(56,201,211,.10), transparent 28%), linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 20px 62px rgba(0,0,0,.26);
+    }
+
+    .telegram-badge-wrap {
+      position: absolute;
+      left: -18px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .telegram-badge-glow {
+      position: absolute;
+      inset: -24px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(56,201,211,.22) 0%, rgba(56,201,211,.10) 42%, transparent 72%);
+      filter: blur(10px);
+      opacity: .95;
+    }
+
+    .telegram-badge {
+      position: relative;
+      width: 112px;
+      height: 112px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, rgba(11,17,27,.96), rgba(7,10,16,.98));
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 18px 44px rgba(0,0,0,.36);
+    }
+
+    .telegram-badge img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 20px rgba(56,201,211,.18));
+    }
+
+    .pricing-wrap {
+      display: grid;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    @media (min-width: 1024px) {
+      .pricing-wrap {
+        grid-template-columns: minmax(0,1fr) minmax(0,1.05fr) minmax(0,1fr);
+      }
+    }
+
+    .pricing-card {
+      border-radius: 34px;
+      min-height: 680px;
+      padding: 30px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pricing-card .price-main {
+      font-size: clamp(3.7rem, 7vw, 5.8rem);
+      line-height: .95;
+      font-weight: 900;
+      letter-spacing: -.06em;
+    }
+
+    .pricing-card .label-top {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: rgba(255,255,255,.56);
+    }
+
+    .pricing-card .subline {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: rgba(255,255,255,.42);
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .pricing-card ul li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: rgba(255,255,255,.84);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .pricing-card ul li::before {
+      content: '◉';
+      color: var(--pink);
+      font-size: 12px;
+      line-height: 1.9;
+      opacity: .92;
+      flex-shrink: 0;
+    }
+
+    .pricing-popular {
+      background:
+        radial-gradient(circle at top, rgba(143,71,169,.14), transparent 38%),
+        linear-gradient(180deg, rgba(14,11,24,.98), rgba(9,10,18,1));
+      box-shadow: 0 24px 76px rgba(143,71,169,.18);
+    }
+
+    .popular-pill {
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 164px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #a861d6, #b08dce, #8f47a9);
+      color: white;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      box-shadow: 0 16px 36px rgba(143,71,169,.30);
+    }
+
+    .pricing-divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.10), transparent);
+      margin: 28px 0;
+    }
+
+    .pricing-button {
+      width: 100%;
+      min-height: 58px;
+      border-radius: 18px;
+    }
+
+    .sticky-float {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 60;
+    }
+
+    .sticky-float a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #5b8ad2 0%, #8f47a9 100%);
+      box-shadow: 0 18px 40px rgba(143,71,169,.30);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+
+    .sticky-float img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    .footer-logo {
+      filter: drop-shadow(0 10px 30px rgba(176,141,206,.16));
+    }
+
+    @media (max-width: 1023px) {
+      .telegram-badge-wrap {
+        position: static;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 18px;
+        pointer-events: auto;
+      }
+
+      .telegram-card {
+        padding-top: 26px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .premium-btn,
+      .secondary-btn {
+        width: 100%;
+      }
+
+      .pricing-card {
+        min-height: auto;
+        padding: 26px 22px;
+        border-radius: 28px;
+      }
+
+      .popular-pill {
+        position: static;
+        transform: none;
+        margin: 0 auto 18px auto;
+      }
+
+      .telegram-badge {
+        width: 84px;
+        height: 84px;
+      }
+
+      .telegram-badge img {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sticky-float hidden md:block">
+    <a href="https://t.me/gamaomar?text=Quiero%20informaci%C3%B3n%20sobre%20Affinity" target="_blank" rel="noopener noreferrer">
+      <img src="https://static.vecteezy.com/system/resources/previews/023/986/562/non_2x/telegram-logo-telegram-logo-transparent-telegram-icon-transparent-free-free-png.png" alt="Telegram">
+      Quiero entrar
+    </a>
+  </div>
+
+  <header class="glass-nav fixed top-0 inset-x-0 z-50">
+    <div class="wrap">
+      <div class="h-20 lg:h-24 flex items-center justify-between gap-6">
+        <a href="#inicio" class="flex items-center gap-3 shrink-0">
+          <img src="assets/affinity-logo.png" alt="Affinity" class="h-10 sm:h-12 lg:h-14 w-auto object-contain" />
+        </a>
+
+        <nav class="hidden xl:flex items-center gap-8 text-[12px] uppercase tracking-[0.18em] font-bold text-white/70">
+          <a href="#inicio" class="hover:text-white transition">Inicio</a>
+          <a href="#filosofia" class="hover:text-white transition">Estructura</a>
+          <a href="#senales" class="hover:text-white transition">Señales</a>
+          <a href="#resultados" class="hover:text-white transition">Resultados</a>
+          <a href="#signal-assist" class="hover:text-white transition">Signal Assist</a>
+          <a href="#planes" class="hover:text-white transition">Acceso</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener noreferrer" class="secondary-btn hidden sm:inline-flex">Resultados</a>
+          <a href="https://t.me/gamaomar?text=Quiero%20informaci%C3%B3n%20sobre%20Affinity" target="_blank" rel="noopener noreferrer" class="premium-btn">Ingresar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="relative overflow-hidden pt-36 sm:pt-40 lg:pt-44 pb-24 sm:pb-28 lg:pb-32">
+      <div class="hero-grid"></div>
+      <div class="noise"></div>
+      <div class="orb-cyan w-[28rem] h-[28rem] -left-20 top-0"></div>
+      <div class="orb-pink w-[34rem] h-[34rem] -right-24 top-6"></div>
+      <div class="orb-blue w-[28rem] h-[28rem] left-1/3 bottom-0"></div>
+
+      <div class="wrap relative z-10">
+        <div class="max-w-5xl mx-auto text-center">
+          <div class="eyebrow">
+            <i></i>
+            comunidad premium · xauusd · volatility 75
+          </div>
+
+          <h1 class="mt-8 text-5xl sm:text-7xl xl:text-[6.3rem] leading-[0.92] font-black tracking-[-0.05em]">
+            Precisión en trading.<br>
+            <span class="title-gradient">Cero improvisación.</span>
+          </h1>
+
+          <p class="mt-8 text-lg sm:text-xl lg:text-[1.34rem] text-white/84 leading-8 sm:leading-9 font-medium max-w-3xl mx-auto">
+            Señales en XAUUSD y Volatility 75 con lógica estructural. Sin saturación. Sin ruido. Solo lo que realmente vale la pena ejecutar.
+          </p>
+
+          <p class="mt-5 text-base sm:text-lg soft-text leading-8 max-w-3xl mx-auto">
+            Acceso inmediato. Comunidad activa. Ejecución más clara para traders que valoran proceso, no improvisación.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#resultados" class="premium-btn">Ver resultados</a>
+            <a href="https://t.me/gamaomar?text=Quiero%20las%20se%C3%B1ales%20de%20Affinity" target="_blank" rel="noopener noreferrer" class="secondary-btn">Acceder a señales</a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-3 justify-center">
+            <span class="badge-small">XAUUSD</span>
+            <span class="badge-small">Volatility 75</span>
+            <span class="badge-small">Comunidad privada</span>
+            <span class="badge-small">Ejecución automatizada</span>
+          </div>
+
+          <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto text-left">
+            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card">
+              <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Activo principal</div>
+              <div class="mt-3 text-xl font-extrabold">XAUUSD</div>
+              <p class="mt-2 text-sm soft-text leading-6">Enfoque principal con estructura y claridad operativa.</p>
+            </div>
+            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card">
+              <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Mercado adicional</div>
+              <div class="mt-3 text-xl font-extrabold">Volatility 75</div>
+              <p class="mt-2 text-sm soft-text leading-6">Una propuesta afinada también para sintéticos.</p>
+            </div>
+            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card">
+              <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Experiencia</div>
+              <div class="mt-3 text-xl font-extrabold">Premium</div>
+              <p class="mt-2 text-sm soft-text leading-6">Diseño, comunidad y seguimiento mejor presentados.</p>
+            </div>
+            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card">
+              <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Tecnología</div>
+              <div class="mt-3 text-xl font-extrabold">Signal Assist</div>
+              <p class="mt-2 text-sm soft-text leading-6">Una capa adicional para ejecutar sin hacerlo manual.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-glow"></div></div>
+
+    <section id="filosofia" class="py-20 sm:py-24 lg:py-28 relative overflow-hidden">
+      <div class="wrap relative z-10">
+        <div class="max-w-4xl">
+          <p class="section-kicker">Nuestra filosofía</p>
+          <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
+            No se trata de operar más.<br>
+            <span class="title-gradient">Se trata de operar mejor.</span>
+          </h2>
+          <p class="mt-6 text-lg soft-text leading-8 max-w-3xl">
+            La mayoría pierde por exceso, no por falta. Demasiadas entradas. Demasiadas decisiones sin contexto. Aquí el enfoque es distinto: menos señales, mejor pensadas.
+          </p>
+        </div>
+
+        <div class="mt-14 grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#gA)" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M4 18h16M6 14l3-3 3 2 5-7 1 1"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold">Cada operación tiene contexto</h3>
+            <p class="mt-3 text-sm soft-text leading-7">Nada entra por impulso. Todo parte de una lectura estructurada del mercado.</p>
+          </article>
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#gA)" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold">No operamos por ansiedad</h3>
+            <p class="mt-3 text-sm soft-text leading-7">El filtro importa más que la cantidad. La paciencia también es parte del edge.</p>
+          </article>
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#gA)" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold">Claridad sobre velocidad</h3>
+            <p class="mt-3 text-sm soft-text leading-7">Preferimos decisiones claras antes que entradas rápidas y mal ejecutadas.</p>
+          </article>
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#gA)" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h10v10H7zM4 4h16v16H4z"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-extrabold">Consistencia sobre emoción</h3>
+            <p class="mt-3 text-sm soft-text leading-7">El objetivo no es una racha. Es sostener una mejor forma de operar en el tiempo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-glow"></div></div>
+
+    <section id="senales" class="py-20 sm:py-24 lg:py-28 overflow-hidden">
+      <div class="wrap">
+        <div class="grid lg:grid-cols-[0.92fr_1.08fr] gap-14 items-center">
+          <div>
+            <p class="section-kicker">Cómo se ven las señales</p>
+            <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
+              Sabes exactamente<br>
+              <span class="title-gradient">qué hacer.</span>
+            </h2>
+            <p class="mt-6 text-lg soft-text leading-8 max-w-2xl">
+              Desde que recibes la señal, ya está definido todo. Sin interpretaciones. Sin dudas a mitad de operación. Solo una ejecución clara de principio a fin.
+            </p>
+
+            <div class="mt-10 space-y-4">
+              <div class="panel outline-gradient rounded-[1.5rem] p-5 step-card flex gap-4 items-start">
+                <div class="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-sm font-black text-affinityCyan shrink-0">01</div>
+                <div>
+                  <div class="text-lg font-extrabold">Entrada clara</div>
+                  <p class="mt-2 text-sm soft-text leading-7">Market o limit, según corresponda. Sin tener que adivinar nada.</p>
+                </div>
+              </div>
+              <div class="panel outline-gradient rounded-[1.5rem] p-5 step-card flex gap-4 items-start">
+                <div class="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-sm font-black text-affinityBlue shrink-0">02</div>
+                <div>
+                  <div class="text-lg font-extrabold">Gestión definida</div>
+                  <p class="mt-2 text-sm soft-text leading-7">Stop Loss, TP1, TP2 y TP3 estructurados desde el inicio.</p>
+                </div>
+              </div>
+              <div class="panel outline-gradient rounded-[1.5rem] p-5 step-card flex gap-4 items-start">
+                <div class="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-sm font-black text-affinityLavender shrink-0">03</div>
+                <div>
+                  <div class="text-lg font-extrabold">Seguimiento durante la operación</div>
+                  <p class="mt-2 text-sm soft-text leading-7">Recibes actualizaciones para entender cómo se está desarrollando el recorrido.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative min-h-[520px] lg:min-h-[700px] flex items-center justify-center">
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div class="w-[34rem] h-[34rem] rounded-full bg-[radial-gradient(circle,rgba(56,201,211,.12),transparent_60%)] blur-2xl"></div>
+            </div>
+
+            <div class="absolute left-0 top-14 lg:top-20 z-10 blur-card rounded-2xl px-4 py-3 max-w-[130px]">
+              <div class="text-[11px] uppercase tracking-[0.18em] text-affinityCyan font-extrabold">Entrada</div>
+            </div>
+            <div class="absolute right-2 top-6 lg:top-16 z-10 blur-card rounded-2xl px-4 py-3 max-w-[120px]">
+              <div class="text-[11px] uppercase tracking-[0.18em] text-affinityLavender font-extrabold">TP / SL</div>
+            </div>
+            <div class="absolute right-0 bottom-24 z-10 blur-card rounded-2xl px-4 py-3 max-w-[130px]">
+              <div class="text-[11px] uppercase tracking-[0.18em] text-affinityPink font-extrabold">Gestión</div>
+            </div>
+            <div class="absolute left-6 bottom-10 z-10 blur-card rounded-2xl px-4 py-3 max-w-[140px]">
+              <div class="text-[11px] uppercase tracking-[0.18em] text-affinityBlue font-extrabold">Seguimiento</div>
+            </div>
+
+            <div class="relative z-20 flex items-center justify-center">
+              <div class="panel w-[195px] sm:w-[230px] lg:w-[270px] p-3 rounded-[2rem] rotate-[-5deg] shadow-deep">
+                <img src="assets/signal-screen-1.png" alt="Señal Affinity 1" class="w-full h-auto rounded-[1.4rem] object-cover" />
+              </div>
+              <div class="panel w-[195px] sm:w-[230px] lg:w-[270px] p-3 rounded-[2rem] -ml-8 sm:-ml-12 lg:-ml-14 rotate-[4deg] z-30 shadow-deep">
+                <img src="assets/signal-screen-2.png" alt="Señal Affinity 2" class="w-full h-auto rounded-[1.4rem] object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-glow"></div></div>
+
+    <section class="py-20 sm:py-24 lg:py-28">
+      <div class="wrap">
+        <div class="relative lg:pl-20">
+          <div class="telegram-badge-wrap">
+            <div class="telegram-badge-glow"></div>
+            <div class="telegram-badge">
+              <img src="https://static.vecteezy.com/system/resources/previews/023/986/562/non_2x/telegram-logo-telegram-logo-transparent-telegram-icon-transparent-free-free-png.png" alt="Telegram" />
+            </div>
+          </div>
+
+          <div class="telegram-card outline-gradient rounded-[2rem] sm:rounded-[2.4rem] p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row gap-8 lg:items-center lg:justify-between">
+            <div class="max-w-3xl">
+              <p class="section-kicker">Canal de resultados</p>
+              <h3 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-black tracking-[-0.03em]">Antes de entrar, mira cómo trabajamos.</h3>
+              <p class="mt-4 text-base sm:text-lg soft-text leading-8 max-w-2xl">Explora el canal de resultados y entiende cómo se mueven las operaciones, cómo se gestionan y qué tipo de recorridos buscamos. Si te hace sentido, ya sabes dónde encontrarnos.</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+              <a href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener noreferrer" class="premium-btn">Ver resultados</a>
+              <a href="https://t.me/gamaomar?text=Quiero%20entrar%20a%20Affinity" target="_blank" rel="noopener noreferrer" class="secondary-btn">Entrar al canal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-glow"></div></div>
+
+    <section id="resultados" class="py-20 sm:py-24 lg:py-28 relative overflow-hidden">
+      <div class="orb-pink w-[24rem] h-[24rem] right-0 top-16"></div>
+      <div class="wrap relative z-10">
+        <div class="max-w-4xl text-center mx-auto">
+          <p class="section-kicker">Resultados</p>
+          <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
+            Resultados visibles.<br>
+            <span class="title-gradient">Proceso visible.</span>
+          </h2>
+          <p class="mt-6 text-lg soft-text leading-8 max-w-3xl mx-auto">No todo depende de un número, pero ver recorridos y consistencia ayuda a entender mejor cómo trabajamos y cómo se mueve la comunidad.</p>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-3 gap-6">
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 text-center mini-result">
+            <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">16 - 22 marzo</div>
+            <div class="mt-5 text-5xl sm:text-6xl font-black result-number">+5410</div>
+            <div class="mt-3 text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Pips acumulados</div>
+            <p class="mt-4 text-sm soft-text leading-7">Un periodo que muestra lo que puede pasar cuando hay estructura y timing.</p>
+          </article>
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 text-center mini-result">
+            <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">23 - 29 marzo</div>
+            <div class="mt-5 text-5xl sm:text-6xl font-black result-number">+2155</div>
+            <div class="mt-3 text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Pips acumulados</div>
+            <p class="mt-4 text-sm soft-text leading-7">La consistencia también se construye viendo cómo se repite el proceso.</p>
+          </article>
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 text-center mini-result">
+            <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">30 marzo - 5 abril</div>
+            <div class="mt-5 text-5xl sm:text-6xl font-black result-number">+620</div>
+            <div class="mt-3 text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Pips acumulados</div>
+            <p class="mt-4 text-sm soft-text leading-7">Incluso semanas más ligeras siguen contando cuando el enfoque es sostenible.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-glow"></div></div>
+
+    <section id="signal-assist" class="py-20 sm:py-24 lg:py-28 overflow-hidden">
+      <div class="wrap">
+        <div class="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-14 items-center">
+          <div class="panel outline-gradient rounded-[2rem] sm:rounded-[2.3rem] p-7 sm:p-10 lg:p-12">
+            <p class="section-kicker">Tecnología Affinity</p>
+            <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
+              Para no depender de estar<br>
+              <span class="title-gradient">pegado al celular.</span>
+            </h2>
+            <p class="mt-6 text-lg soft-text leading-8 max-w-2xl">Affinity Signal Assist conecta las señales con tu cuenta de trading. Sin copiar manualmente. Reduciendo retrasos en la ejecución. Manteniendo una experiencia más consistente.</p>
+
+            <div class="mt-10 grid sm:grid-cols-2 gap-4">
+              <div class="blur-card rounded-[1.4rem] p-5">
+                <div class="text-sm font-extrabold">Conexión directa con MT5</div>
+                <p class="mt-3 text-sm soft-text leading-7">Integra mejor la señal con tu ejecución sin depender de hacerlo a mano.</p>
+              </div>
+              <div class="blur-card rounded-[1.4rem] p-5">
+                <div class="text-sm font-extrabold">Múltiples cuentas</div>
+                <p class="mt-3 text-sm soft-text leading-7">Pensado para una operación más flexible y ordenada.</p>
+              </div>
+            </div>
+
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+              <a href="https://t.me/gamaomar?text=Quiero%20contratar%20Affinity%20Signal%20Assist" target="_blank" rel="noopener noreferrer" class="premium-btn">Quiero contratar</a>
+              <a href="#planes" class="secondary-btn">Ver acceso</a>
+            </div>
+          </div>
+
+          <div class="relative min-h-[420px] sm:min-h-[480px] lg:min-h-[560px] flex items-center justify-center">
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div class="w-[32rem] h-[32rem] rounded-full bg-[radial-gradient(circle,rgba(143,71,169,.16),transparent_62%)] blur-2xl"></div>
+            </div>
+
+            <div class="panel w-[210px] sm:w-[250px] lg:w-[270px] p-3 rounded-[2rem] z-10 shadow-deep rotate-[-6deg]">
+              <img src="https://www.ifcmarkets.com/upload/images/mt5_ios.png" alt="MT5 iOS" class="w-full h-auto rounded-[1.3rem] object-contain" />
+            </div>
+
+            <div class="relative z-20 w-[220px] sm:w-[280px] lg:w-[350px] -ml-6 sm:-ml-10 lg:-ml-12">
+              <img src="assets/affy.png" alt="Affy" class="w-full h-auto object-contain drop-shadow-[0_28px_80px_rgba(143,71,169,.34)]" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-glow"></div></div>
+
+    <section class="py-20 sm:py-24 lg:py-28">
+      <div class="wrap">
+        <div class="text-center max-w-4xl mx-auto">
+          <p class="section-kicker">Testimonios</p>
+          <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
+            Lo que dice<br>
+            <span class="title-gradient">la comunidad.</span>
+          </h2>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card">
+            <div class="text-affinityPink text-lg tracking-[0.25em]">★★★★★</div>
+            <p class="mt-5 text-sm soft-text leading-7">“Al principio entré solo a ver resultados… y ya con eso me convencí solo.”</p>
+            <div class="mt-6 text-sm font-extrabold">Carlos, México</div>
+          </article>
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card">
+            <div class="text-affinityPink text-lg tracking-[0.25em]">★★★★★</div>
+            <p class="mt-5 text-sm soft-text leading-7">“Lo que más me cambió fue dejar de entrar a todo… aquí te enseñan a esperar.”</p>
+            <div class="mt-6 text-sm font-extrabold">Mateo, Colombia</div>
+          </article>
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card">
+            <div class="text-affinityPink text-lg tracking-[0.25em]">★★★★★</div>
+            <p class="mt-5 text-sm soft-text leading-7">“No es perfecto, pero sí es mucho más claro que todo lo que había probado antes.”</p>
+            <div class="mt-6 text-sm font-extrabold">Sergio, España</div>
+          </article>
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card">
+            <div class="text-affinityPink text-lg tracking-[0.25em]">★★★★★</div>
+            <p class="mt-5 text-sm soft-text leading-7">“Con el copier ya no ando corriendo para meter las entradas… eso me ayudó bastante.”</p>
+            <div class="mt-6 text-sm font-extrabold">Alan, México</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-glow"></div></div>
+
+    <section id="planes" class="py-20 sm:py-24 lg:py-28">
+      <div class="wrap">
+        <div class="text-center max-w-4xl mx-auto">
+          <p class="section-kicker">Acceso</p>
+          <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
+            Elige cómo quieres<br>
+            <span class="title-gradient">entrar.</span>
+          </h2>
+          <p class="mt-6 text-lg soft-text leading-8 max-w-3xl mx-auto">Puedes probar, puedes escalar o puedes quedarte de lleno dentro del ecosistema Affinity.</p>
+        </div>
+
+        <div class="mt-14 pricing-wrap">
+          <article class="panel outline-gradient pricing-card">
+            <div>
+              <div class="label-top">Acceso independiente</div>
+              <h3 class="mt-6 text-3xl sm:text-4xl font-black tracking-[-0.03em]">Pago único</h3>
+              <div class="mt-4 subline">Compatible con cualquier broker</div>
+              <div class="mt-10 flex items-end gap-2">
+                <div class="price-main">$499</div>
+                <div class="pb-2 text-sm font-extrabold uppercase tracking-[0.18em] text-white/36">USD</div>
+              </div>
+              <div class="pricing-divider"></div>
+              <ul>
+                <li>Acceso de por vida</li>
+                <li>Señales completas</li>
+                <li>XAUUSD y Volatility 75</li>
+              </ul>
+            </div>
+
+            <div class="pt-10">
+              <a href="https://t.me/gamaomar?text=Quiero%20contratar%20el%20acceso%20independiente%20de%20Affinity" target="_blank" rel="noopener noreferrer" class="secondary-btn pricing-button">Entrar ahora</a>
+            </div>
+          </article>
+
+          <article class="panel outline-gradient pricing-card pricing-popular relative">
+            <div class="popular-pill">Más popular</div>
+            <div class="pt-10 md:pt-12">
+              <div class="label-top text-affinityLavender">Pro Partner</div>
+              <h3 class="mt-6 text-3xl sm:text-4xl font-black tracking-[-0.03em]">Con broker aliado</h3>
+              <div class="mt-4 subline text-affinityPink">La forma más directa de entrar con ventaja</div>
+              <div class="mt-10 text-center">
+                <div class="text-3xl font-extrabold text-white/22 line-through">$499</div>
+                <div class="mt-3 price-main text-affinityLavender">$100</div>
+                <div class="mt-4 subline">Acceso lifetime</div>
+              </div>
+              <div class="mt-10 panel rounded-[1.6rem] p-6 bg-white/3 border border-white/8">
+                <ul>
+                  <li>Acceso completo</li>
+                  <li>Mejor integración operativa</li>
+                  <li>Soporte prioritario</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-10">
+              <a href="https://t.me/gamaomar?text=Quiero%20este%20plan%20de%20Affinity" target="_blank" rel="noopener noreferrer" class="premium-btn pricing-button">Quiero este</a>
+            </div>
+          </article>
+
+          <article class="panel outline-gradient pricing-card">
+            <div>
+              <div class="label-top">Acceso mensual</div>
+              <h3 class="mt-6 text-3xl sm:text-4xl font-black tracking-[-0.03em]">Sin compromiso</h3>
+              <div class="mt-4 subline">Flexibilidad total</div>
+              <div class="mt-10 flex items-end gap-2">
+                <div class="price-main">$50</div>
+                <div class="pb-2 text-sm font-extrabold uppercase tracking-[0.18em] text-white/36">USD/MES</div>
+              </div>
+              <div class="pricing-divider"></div>
+              <ul>
+                <li>Acceso por 30 días</li>
+                <li>Puedes cancelar cuando quieras</li>
+                <li>Comunidad privada</li>
+              </ul>
+            </div>
+
+            <div class="pt-10">
+              <a href="https://t.me/gamaomar?text=Quiero%20probar%20el%20plan%20mensual%20de%20Affinity" target="_blank" rel="noopener noreferrer" class="secondary-btn pricing-button">Probar ahora</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-glow"></div></div>
+
+    <section class="py-20 sm:py-24 lg:py-28">
+      <div class="wrap">
+        <div class="text-center max-w-4xl mx-auto">
+          <p class="section-kicker">Próximamente</p>
+          <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
+            Esto apenas<br>
+            <span class="title-gradient">va empezando.</span>
+          </h2>
+          <p class="mt-6 text-lg soft-text leading-8 max-w-3xl mx-auto">Estamos construyendo más piezas alrededor de lo mismo: ejecución real, mejor estructura y nuevas formas de escalar dentro del ecosistema Affinity.</p>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 min-h-[260px] soon-card flex flex-col justify-between">
+            <div>
+              <p class="section-kicker">Education</p>
+              <h3 class="mt-8 text-3xl sm:text-[2.15rem] font-black tracking-[-0.03em] leading-tight">IBs University</h3>
+              <p class="mt-6 text-base soft-text leading-8">Cómo construir negocio dentro del trading y escalar comunidades con mejor estructura.</p>
+            </div>
+          </article>
+
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 min-h-[260px] soon-card flex flex-col justify-between">
+            <div>
+              <p class="section-kicker">Tech</p>
+              <h3 class="mt-8 text-3xl sm:text-[2.15rem] font-black tracking-[-0.03em] leading-tight">Trading Algorítmico</h3>
+              <p class="mt-6 text-base soft-text leading-8">Automatización con lógica estructural y sistemas diseñados para ejecución continua.</p>
+            </div>
+          </article>
+
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 min-h-[260px] soon-card flex flex-col justify-between">
+            <div>
+              <p class="section-kicker">Academy</p>
+              <h3 class="mt-8 text-3xl sm:text-[2.15rem] font-black tracking-[-0.03em] leading-tight">Academia de Trading</h3>
+              <p class="mt-6 text-base soft-text leading-8">Proceso completo desde análisis hasta ejecución con enfoque práctico y aplicado.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-glow"></div></div>
+
+    <section class="py-20 sm:py-24 lg:py-28">
+      <div class="wrap">
+        <div class="rounded-[2rem] sm:rounded-[2.6rem] p-[1px] bg-[linear-gradient(135deg,rgba(56,201,211,.18),rgba(176,141,206,.20),rgba(143,71,169,.28))] shadow-purple">
+          <div class="relative rounded-[2rem] sm:rounded-[2.6rem] bg-[linear-gradient(180deg,rgba(9,11,18,.96),rgba(6,7,12,1))] px-6 py-14 sm:px-10 sm:py-16 lg:px-16 lg:py-20 text-center overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none">
+              <div class="orb-cyan w-[26rem] h-[26rem] left-[-10%] top-0"></div>
+              <div class="orb-pink w-[30rem] h-[30rem] right-[-10%] bottom-0"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto">
+              <p class="section-kicker">Cierre</p>
+              <h2 class="mt-4 text-4xl sm:text-5xl lg:text-7xl font-black leading-[0.96] tracking-[-0.05em]">
+                Puedes seguir intentando solo…<br>
+                <span class="title-gradient">o usar algo que ya está funcionando.</span>
+              </h2>
+              <p class="mt-6 text-base sm:text-lg lg:text-xl soft-text leading-8 lg:leading-9 max-w-3xl mx-auto">No necesitas descubrir todo desde cero. Ya hay estructura. Ya hay experiencia. Ya hay resultados. La decisión es tuya.</p>
+              <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://t.me/gamaomar?text=Quiero%20entrar%20a%20Affinity" target="_blank" rel="noopener noreferrer" class="premium-btn">Quiero entrar</a>
+                <a href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener noreferrer" class="secondary-btn">Ver resultados</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5 bg-black/20">
+    <div class="wrap py-14 lg:py-16">
+      <div class="grid lg:grid-cols-[1.2fr_0.8fr_0.8fr] gap-10">
+        <div>
+          <img src="assets/affinity-logo.png" alt="Affinity" class="h-12 w-auto object-contain footer-logo" />
+          <p class="mt-6 text-sm soft-text leading-7 max-w-2xl">Operar en mercados financieros implica riesgo. Nada garantiza resultados, pero sí puedes mejorar tu proceso con una mejor estructura, mejor ejecución y una comunidad más clara.</p>
+        </div>
+
+        <div>
+          <div class="text-[11px] uppercase tracking-[0.22em] text-white/60 font-extrabold">Explora</div>
+          <div class="mt-5 space-y-3 text-sm">
+            <a href="#inicio" class="block text-white/72 hover:text-white transition">Inicio</a>
+            <a href="#filosofia" class="block text-white/72 hover:text-white transition">Estructura</a>
+            <a href="#senales" class="block text-white/72 hover:text-white transition">Señales</a>
+            <a href="#resultados" class="block text-white/72 hover:text-white transition">Resultados</a>
+            <a href="#signal-assist" class="block text-white/72 hover:text-white transition">Signal Assist</a>
+            <a href="#planes" class="block text-white/72 hover:text-white transition">Acceso</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-[11px] uppercase tracking-[0.22em] text-white/60 font-extrabold">Contacto</div>
+          <div class="mt-5 space-y-3 text-sm">
+            <a href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener noreferrer" class="block text-white/72 hover:text-white transition">Canal de resultados</a>
+            <a href="https://t.me/gamaomar?text=Quiero%20informaci%C3%B3n%20sobre%20Affinity" target="_blank" rel="noopener noreferrer" class="block text-white/72 hover:text-white transition">Hablar por Telegram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+        <p class="text-xs uppercase tracking-[0.18em] text-white/50 font-extrabold">© 2026 Affinity. Todos los derechos reservados.</p>
+        <div class="text-xs uppercase tracking-[0.18em] text-white/40 font-bold">Señales · ejecución · ecosistema</div>
+      </div>
+    </div>
+  </footer>
+
+  <svg width="0" height="0" class="absolute">
+    <defs>
+      <linearGradient id="gA" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#38c9d3"></stop>
+        <stop offset="50%" stop-color="#6789c0"></stop>
+        <stop offset="100%" stop-color="#b08dce"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+</body>
+</html>
