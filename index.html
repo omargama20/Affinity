@@ -680,7 +680,7 @@
       .affy-stack { min-height: 420px; }
       .mt5-phone-left,
       .mt5-phone-right { width: min(34vw, 220px); }
-      .signals-stage { min-height: 390px; }
+      .signals-stage { min-height: 280px; }
     }
 
     @media (max-width: 767px) {
@@ -689,7 +689,7 @@
 
       .pricing-card {
         min-height: auto;
-        padding: 26px 22px;
+        padding: 22px 18px !important;
         border-radius: 28px;
       }
 
@@ -711,36 +711,72 @@
 
       .affy-stack {
         min-height: auto;
-        padding-top: 30px;
-        padding-bottom: 20px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         flex-direction: column;
-        gap: 18px;
+        gap: 8px;
       }
 
       .mt5-phone-left,
-      .mt5-phone-right,
       .affy-center {
         position: static;
-        width: 72%;
-        max-width: 260px;
         min-width: 0;
         transform: none !important;
       }
 
-      .mt5-phone-left,
-      .mt5-phone-right { animation: none; }
+      .mt5-phone-left {
+        width: 68%;
+        max-width: 220px;
+        animation: none;
+      }
+
+      .mt5-phone-right {
+        display: none;
+      }
 
       .affy-center {
-        width: 58%;
-        max-width: 220px;
+        width: 46%;
+        max-width: 160px;
       }
 
       .signals-stage {
-        min-height: 330px;
+        min-height: 220px;
       }
 
       .demo-screen {
-        min-height: 420px;
+        min-height: 320px;
+      }
+
+      .ticker-line {
+        min-height: 64px;
+      }
+
+      #demo-recorrido .demo-info-card {
+        padding: 12px;
+      }
+
+      #demo-recorrido .panel.outline-gradient {
+        padding: 18px;
+      }
+
+      #senales .absolute.left-0.top-14,
+      #senales .absolute.right-2.top-6,
+      #senales .absolute.right-0.bottom-24 {
+        display: none;
+      }
+
+      #senales .absolute.left-6.bottom-10 {
+        left: 50%;
+        bottom: -2px;
+        transform: translateX(-50%);
+      }
+
+      .feature-card,
+      .quote-card,
+      .step-card,
+      .mini-result,
+      .soon-card {
+        padding: 18px !important;
       }
     }
   </style>
@@ -778,7 +814,7 @@
   </header>
 
   <main>
-    <section id="inicio" class="relative overflow-hidden pt-36 sm:pt-40 lg:pt-44 pb-24 sm:pb-28 lg:pb-32">
+    <section id="inicio" class="relative overflow-hidden pt-28 sm:pt-36 lg:pt-44 pb-16 sm:pb-24 lg:pb-32">
       <div class="hero-grid"></div>
       <div class="noise"></div>
       <div class="orb-cyan w-[28rem] h-[28rem] -left-20 top-0"></div>
@@ -792,16 +828,16 @@
             comunidad premium · xauusd · volatility 75
           </div>
 
-          <h1 class="mt-8 text-5xl sm:text-7xl xl:text-[6.3rem] leading-[0.92] font-black tracking-[-0.05em]">
+          <h1 class="mt-6 text-4xl sm:text-7xl xl:text-[6.3rem] leading-[0.96] font-black tracking-[-0.05em]">
             Precisión en trading.<br>
             <span class="title-gradient">Cero improvisación.</span>
           </h1>
 
-          <p class="mt-8 text-lg sm:text-xl lg:text-[1.34rem] text-white/84 leading-8 sm:leading-9 font-medium max-w-3xl mx-auto">
+          <p class="mt-6 text-base sm:text-xl lg:text-[1.34rem] text-white/84 leading-7 sm:leading-9 font-medium max-w-3xl mx-auto">
             Señales en XAUUSD y Volatility 75 con lógica estructural. Sin saturación. Sin ruido. Solo lo que realmente vale la pena ejecutar.
           </p>
 
-          <p class="mt-5 text-base sm:text-lg soft-text leading-8 max-w-3xl mx-auto">
+          <p class="mt-4 text-sm sm:text-lg soft-text leading-7 sm:leading-8 max-w-3xl mx-auto">
             Acceso inmediato. Comunidad activa. Ejecución más clara para traders que valoran proceso, no improvisación.
           </p>
 
@@ -817,7 +853,7 @@
             <span class="badge-small">Ejecución automatizada</span>
           </div>
 
-          <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto text-left">
+          <div class="mt-10 sm:mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto text-left">
             <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card reveal">
               <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Activo principal</div>
               <div class="mt-3 text-xl font-extrabold">XAUUSD</div>
@@ -845,7 +881,7 @@
 
     <div class="wrap"><div class="divider-glow"></div></div>
 
-    <section id="filosofia" class="py-20 sm:py-24 lg:py-28 relative overflow-hidden">
+    <section id="filosofia" class="py-14 sm:py-18 lg:py-28 relative overflow-hidden">
       <div class="wrap relative z-10">
         <div class="max-w-4xl reveal">
           <p class="section-kicker">Nuestra filosofía</p>
@@ -858,7 +894,7 @@
           </p>
         </div>
 
-        <div class="mt-14 grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div class="mt-10 sm:mt-12 grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
           <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift reveal">
             <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#gA)" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M4 18h16M6 14l3-3 3 2 5-7 1 1"/></svg>
@@ -893,9 +929,9 @@
 
     <div class="wrap"><div class="divider-glow"></div></div>
 
-    <section id="senales" class="py-20 sm:py-24 lg:py-28 overflow-hidden">
+    <section id="senales" class="py-14 sm:py-18 lg:py-28 overflow-hidden">
       <div class="wrap">
-        <div class="grid lg:grid-cols-[0.92fr_1.08fr] gap-14 items-center">
+        <div class="grid lg:grid-cols-[0.92fr_1.08fr] gap-10 sm:gap-12 lg:gap-14 items-center">
           <div class="reveal">
             <p class="section-kicker">Cómo se ven las señales</p>
             <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
@@ -906,7 +942,7 @@
               Desde que recibes la señal, ya está definido todo. Sin interpretaciones. Sin dudas a mitad de operación. Solo una ejecución clara de principio a fin.
             </p>
 
-            <div class="mt-10 space-y-4">
+            <div class="mt-8 sm:mt-10 space-y-4">
               <div class="panel outline-gradient rounded-[1.5rem] p-5 step-card flex gap-4 items-start reveal">
                 <div class="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-sm font-black text-affinityCyan shrink-0">01</div>
                 <div>
@@ -931,7 +967,7 @@
             </div>
           </div>
 
-          <div class="relative min-h-[520px] lg:min-h-[700px] flex items-center justify-center reveal">
+          <div class="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[700px] flex items-center justify-center reveal">
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div class="w-[34rem] h-[34rem] rounded-full bg-[radial-gradient(circle,rgba(56,201,211,.12),transparent_60%)] blur-2xl"></div>
             </div>
@@ -950,17 +986,15 @@
             </div>
 
             <div class="relative z-20 w-full max-w-[620px] mx-auto flex items-center justify-center py-4 sm:py-6 lg:py-8">
-             <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
-               <div class="w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] rounded-full bg-[radial-gradient(circle,rgba(56,201,211,.10),transparent_65%)] blur-3xl"></div>
-             </div>
-
-             <img
-              src="https://raw.githubusercontent.com/omargama20/Affinity/6e1b83ccaa8bf691b697cd2b5fea59c80f16592d/alertas_xauusd-removebg-preview.png"
-              alt="Señal Affinity XAUUSD"
-              class="relative z-20 w-[680px] sm:w-[860px] lg:w-[1040px] signal-shot"
-            />
-          </div>
+              <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+                <div class="w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] rounded-full bg-[radial-gradient(circle,rgba(56,201,211,.10),transparent_65%)] blur-3xl"></div>
               </div>
+
+              <img
+                src="https://raw.githubusercontent.com/omargama20/Affinity/6e1b83ccaa8bf691b697cd2b5fea59c80f16592d/alertas_xauusd-removebg-preview.png"
+                alt="Señal Affinity XAUUSD"
+                class="relative z-20 w-[440px] sm:w-[700px] lg:w-[1040px] signal-shot"
+              />
             </div>
           </div>
         </div>
@@ -969,13 +1003,13 @@
 
     <div class="wrap"><div class="divider-glow"></div></div>
 
-    <section id="demo-recorrido" class="py-20 sm:py-24 lg:py-28 overflow-hidden">
+    <section id="demo-recorrido" class="py-14 sm:py-18 lg:py-28 overflow-hidden">
       <div class="wrap">
         <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-10 items-stretch">
           <div class="panel outline-gradient rounded-[2rem] p-6 sm:p-8 lg:p-10 demo-shell reveal flex flex-col justify-between">
             <div>
               <p class="section-kicker">Vista previa</p>
-              <h3 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-[-0.04em] leading-tight">Simulación de recorrido en vivo</h3>
+              <h3 class="mt-3 text-2xl sm:text-4xl lg:text-5xl font-black tracking-[-0.04em] leading-tight">Simulación de recorrido en vivo</h3>
               <p class="mt-5 text-base sm:text-lg soft-text leading-8 max-w-xl">Una representación visual de cómo se siente ver una operación avanzar dentro del ecosistema: activación, recorrido y objetivos alcanzados.</p>
             </div>
 
@@ -1047,7 +1081,7 @@
 
     <div class="wrap"><div class="divider-glow"></div></div>
 
-    <section class="py-20 sm:py-24 lg:py-28">
+    <section class="py-14 sm:py-18 lg:py-28">
       <div class="wrap">
         <div class="relative lg:pl-20 reveal">
           <div class="telegram-badge-wrap">
@@ -1075,7 +1109,7 @@
 
     <div class="wrap"><div class="divider-glow"></div></div>
 
-    <section id="resultados" class="py-20 sm:py-24 lg:py-28 relative overflow-hidden">
+    <section id="resultados" class="py-14 sm:py-18 lg:py-28 relative overflow-hidden">
       <div class="orb-pink w-[24rem] h-[24rem] right-0 top-16"></div>
       <div class="wrap relative z-10">
         <div class="max-w-4xl text-center mx-auto reveal">
@@ -1087,7 +1121,7 @@
           <p class="mt-6 text-lg soft-text leading-8 max-w-3xl mx-auto">No todo depende de un número, pero ver recorridos y consistencia ayuda a entender mejor cómo trabajamos y cómo se mueve la comunidad.</p>
         </div>
 
-        <div class="mt-14 grid md:grid-cols-3 gap-6">
+        <div class="mt-10 sm:mt-12 grid md:grid-cols-3 gap-6">
           <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 text-center mini-result reveal">
             <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">16 - 22 marzo</div>
             <div class="mt-5 text-5xl sm:text-6xl font-black result-number">+5410</div>
@@ -1112,7 +1146,7 @@
 
     <div class="wrap"><div class="divider-glow"></div></div>
 
-    <section id="signal-assist" class="py-20 sm:py-24 lg:py-28 overflow-hidden">
+    <section id="signal-assist" class="py-14 sm:py-18 lg:py-28 overflow-hidden">
       <div class="wrap">
         <div class="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-14 items-center">
           <div class="panel outline-gradient rounded-[2rem] sm:rounded-[2.3rem] p-7 sm:p-10 lg:p-12 reveal">
@@ -1155,7 +1189,7 @@
 
     <div class="wrap"><div class="divider-glow"></div></div>
 
-    <section class="py-20 sm:py-24 lg:py-28">
+    <section class="py-14 sm:py-18 lg:py-28">
       <div class="wrap">
         <div class="text-center max-w-4xl mx-auto reveal">
           <p class="section-kicker">Testimonios</p>
@@ -1165,7 +1199,7 @@
           </h2>
         </div>
 
-        <div class="mt-14 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div class="mt-10 sm:mt-12 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
           <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card reveal">
             <div class="text-affinityPink text-lg tracking-[0.25em]">★★★★★</div>
             <p class="mt-5 text-sm soft-text leading-7">“Al principio entré solo a ver resultados… y ya con eso me convencí solo.”</p>
@@ -1192,7 +1226,7 @@
 
     <div class="wrap"><div class="divider-glow"></div></div>
 
-    <section id="planes" class="py-20 sm:py-24 lg:py-28">
+    <section id="planes" class="py-14 sm:py-18 lg:py-28">
       <div class="wrap">
         <div class="text-center max-w-4xl mx-auto reveal">
           <p class="section-kicker">Acceso</p>
@@ -1203,7 +1237,7 @@
           <p class="mt-6 text-lg soft-text leading-8 max-w-3xl mx-auto">Puedes probar, puedes escalar o puedes quedarte de lleno dentro del ecosistema Affinity.</p>
         </div>
 
-        <div class="mt-14 pricing-wrap">
+        <div class="mt-10 sm:mt-12 pricing-wrap">
           <article class="panel outline-gradient pricing-card reveal">
             <div>
               <div class="label-top">Acceso independiente</div>
@@ -1278,7 +1312,7 @@
 
     <div class="wrap"><div class="divider-glow"></div></div>
 
-    <section class="py-20 sm:py-24 lg:py-28">
+    <section class="py-14 sm:py-18 lg:py-28">
       <div class="wrap">
         <div class="text-center max-w-4xl mx-auto reveal">
           <p class="section-kicker">Próximamente</p>
@@ -1289,7 +1323,7 @@
           <p class="mt-6 text-lg soft-text leading-8 max-w-3xl mx-auto">Estamos construyendo más piezas alrededor de lo mismo: ejecución real, mejor estructura y nuevas formas de escalar dentro del ecosistema Affinity.</p>
         </div>
 
-        <div class="mt-14 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div class="mt-10 sm:mt-12 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
           <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 min-h-[260px] soon-card flex flex-col justify-between reveal">
             <div>
               <p class="section-kicker">Education</p>
@@ -1319,7 +1353,7 @@
 
     <div class="wrap"><div class="divider-glow"></div></div>
 
-    <section class="py-20 sm:py-24 lg:py-28">
+    <section class="py-14 sm:py-18 lg:py-28">
       <div class="wrap">
         <div class="rounded-[2rem] sm:rounded-[2.6rem] p-[1px] bg-[linear-gradient(135deg,rgba(56,201,211,.18),rgba(176,141,206,.20),rgba(143,71,169,.28))] shadow-purple reveal">
           <div class="relative rounded-[2rem] sm:rounded-[2.6rem] bg-[linear-gradient(180deg,rgba(9,11,18,.96),rgba(6,7,12,1))] px-6 py-14 sm:px-10 sm:py-16 lg:px-16 lg:py-20 text-center overflow-hidden">
