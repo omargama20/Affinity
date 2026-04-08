@@ -34,7 +34,27 @@
           boxShadow: {
             deep: '0 32px 120px rgba(0,0,0,0.48)',
             purple: '0 22px 72px rgba(143,71,169,0.24)',
-            soft: '0 18px 50px rgba(0,0,0,0.28)'
+            soft: '0 18px 50px rgba(0,0,0,0.28)',
+            cyan: '0 18px 60px rgba(56,201,211,0.18)'
+          },
+          keyframes: {
+            floaty: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' }
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '.7' },
+              '50%': { opacity: '1' }
+            },
+            shimmer: {
+              '0%': { transform: 'translateX(-120%)' },
+              '100%': { transform: 'translateX(120%)' }
+            }
+          },
+          animation: {
+            floaty: 'floaty 6s ease-in-out infinite',
+            pulseSoft: 'pulseSoft 4s ease-in-out infinite',
+            shimmer: 'shimmer 3.8s linear infinite'
           }
         }
       }
@@ -68,6 +88,12 @@
         linear-gradient(180deg, #04050a 0%, #060913 36%, #04050a 100%);
       color: var(--white);
       overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
     }
 
     .wrap {
@@ -205,6 +231,7 @@
 
     .premium-btn,
     .secondary-btn {
+      position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -218,11 +245,22 @@
       text-transform: uppercase;
       transition: transform .24s ease, box-shadow .24s ease, background .24s ease, border-color .24s ease, opacity .24s ease;
       text-align: center;
+      overflow: hidden;
     }
 
     .premium-btn:hover,
     .secondary-btn:hover,
     .lift:hover { transform: translateY(-3px); }
+
+    .premium-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+      transform: translateX(-120%);
+      animation: shimmer 3.8s linear infinite;
+      pointer-events: none;
+    }
 
     .premium-btn {
       color: #fff;
@@ -280,7 +318,8 @@
     .pricing-card,
     .soon-card,
     .stat-card,
-    .mini-result {
+    .mini-result,
+    .demo-info-card {
       transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
     }
 
@@ -290,7 +329,8 @@
     .pricing-card:hover,
     .soon-card:hover,
     .stat-card:hover,
-    .mini-result:hover {
+    .mini-result:hover,
+    .demo-info-card:hover {
       transform: translateY(-5px);
       border-color: rgba(176,141,206,.20);
       box-shadow: 0 22px 60px rgba(0,0,0,.32);
@@ -346,6 +386,137 @@
       height: 58px;
       object-fit: contain;
       filter: drop-shadow(0 10px 20px rgba(56,201,211,.18));
+    }
+
+    .signal-shot {
+      filter: drop-shadow(0 30px 90px rgba(0,0,0,.42)) drop-shadow(0 0 26px rgba(56,201,211,.08));
+      transition: transform .35s ease, filter .35s ease;
+    }
+
+    .signal-shot:hover {
+      transform: translateY(-8px) scale(1.025);
+      filter: drop-shadow(0 36px 110px rgba(0,0,0,.48)) drop-shadow(0 0 34px rgba(176,141,206,.14));
+    }
+
+    .signals-stage {
+      position: relative;
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .demo-shell {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(56,201,211,.10), transparent 26%),
+        linear-gradient(180deg, rgba(12,16,24,.98), rgba(8,10,17,1));
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 24px 90px rgba(0,0,0,.42);
+    }
+
+    .demo-shell::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), transparent 20%);
+      pointer-events: none;
+    }
+
+    .demo-screen {
+      position: relative;
+      min-height: 460px;
+      overflow: hidden;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at top right, rgba(143,71,169,.12), transparent 30%),
+        linear-gradient(180deg, #0b1220 0%, #0a101b 100%);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+
+    .demo-message {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .35s ease, transform .35s ease;
+    }
+
+    .demo-message.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .demo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .ticker-line {
+      min-height: 88px;
+    }
+
+    .affy-stack {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .affy-bot {
+      animation: floaty 6s ease-in-out infinite;
+      filter: drop-shadow(0 25px 80px rgba(143,71,169,.28));
+    }
+
+    .mt5-phone-left,
+    .mt5-phone-right {
+      position: absolute;
+      width: min(32vw, 290px);
+      max-width: 290px;
+      min-width: 170px;
+      filter: drop-shadow(0 28px 90px rgba(0,0,0,.4));
+    }
+
+    .mt5-phone-left {
+      left: 12%;
+      top: 16%;
+      transform: rotate(-6deg);
+      animation: floaty 6.5s ease-in-out infinite;
+    }
+
+    .mt5-phone-right {
+      right: 10%;
+      bottom: 10%;
+      transform: rotate(6deg);
+      animation: floaty 6.8s ease-in-out infinite reverse;
+    }
+
+    .affy-center {
+      position: relative;
+      z-index: 3;
+      width: min(40vw, 320px);
+      max-width: 320px;
+      min-width: 180px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .pricing-wrap {
@@ -489,6 +660,12 @@
       filter: drop-shadow(0 10px 30px rgba(176,141,206,.16));
     }
 
+    @media (max-width: 1279px) {
+      .affy-stack { min-height: 460px; }
+      .mt5-phone-left { left: 8%; }
+      .mt5-phone-right { right: 8%; }
+    }
+
     @media (max-width: 1023px) {
       .telegram-badge-wrap {
         position: static;
@@ -499,16 +676,16 @@
         pointer-events: auto;
       }
 
-      .telegram-card {
-        padding-top: 26px;
-      }
+      .telegram-card { padding-top: 26px; }
+      .affy-stack { min-height: 420px; }
+      .mt5-phone-left,
+      .mt5-phone-right { width: min(34vw, 220px); }
+      .signals-stage { min-height: 390px; }
     }
 
     @media (max-width: 767px) {
       .premium-btn,
-      .secondary-btn {
-        width: 100%;
-      }
+      .secondary-btn { width: 100%; }
 
       .pricing-card {
         min-height: auto;
@@ -531,6 +708,40 @@
         width: 42px;
         height: 42px;
       }
+
+      .affy-stack {
+        min-height: auto;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .mt5-phone-left,
+      .mt5-phone-right,
+      .affy-center {
+        position: static;
+        width: 72%;
+        max-width: 260px;
+        min-width: 0;
+        transform: none !important;
+      }
+
+      .mt5-phone-left,
+      .mt5-phone-right { animation: none; }
+
+      .affy-center {
+        width: 58%;
+        max-width: 220px;
+      }
+
+      .signals-stage {
+        min-height: 330px;
+      }
+
+      .demo-screen {
+        min-height: 420px;
+      }
     }
   </style>
 </head>
@@ -546,7 +757,7 @@
     <div class="wrap">
       <div class="h-20 lg:h-24 flex items-center justify-between gap-6">
         <a href="#inicio" class="flex items-center gap-3 shrink-0">
-          <img src="assets/affinity-logo.png" alt="Affinity" class="h-10 sm:h-12 lg:h-14 w-auto object-contain" />
+          <img src="https://raw.githubusercontent.com/omargama20/Affinity/6e1b83ccaa8bf691b697cd2b5fea59c80f16592d/Gemini_Generated_Image_k0fsilk0fsilk0fs__1_-removebg-preview.png" alt="Affinity" class="h-10 sm:h-12 lg:h-14 w-auto object-contain" />
         </a>
 
         <nav class="hidden xl:flex items-center gap-8 text-[12px] uppercase tracking-[0.18em] font-bold text-white/70">
@@ -575,8 +786,8 @@
       <div class="orb-blue w-[28rem] h-[28rem] left-1/3 bottom-0"></div>
 
       <div class="wrap relative z-10">
-        <div class="max-w-5xl mx-auto text-center">
-          <div class="eyebrow">
+        <div class="max-w-5xl mx-auto text-center reveal">
+          <div class="eyebrow mx-auto w-fit">
             <i></i>
             comunidad premium · xauusd · volatility 75
           </div>
@@ -607,22 +818,22 @@
           </div>
 
           <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto text-left">
-            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card">
+            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card reveal">
               <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Activo principal</div>
               <div class="mt-3 text-xl font-extrabold">XAUUSD</div>
               <p class="mt-2 text-sm soft-text leading-6">Enfoque principal con estructura y claridad operativa.</p>
             </div>
-            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card">
+            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card reveal">
               <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Mercado adicional</div>
               <div class="mt-3 text-xl font-extrabold">Volatility 75</div>
               <p class="mt-2 text-sm soft-text leading-6">Una propuesta afinada también para sintéticos.</p>
             </div>
-            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card">
+            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card reveal">
               <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Experiencia</div>
               <div class="mt-3 text-xl font-extrabold">Premium</div>
               <p class="mt-2 text-sm soft-text leading-6">Diseño, comunidad y seguimiento mejor presentados.</p>
             </div>
-            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card">
+            <div class="panel outline-gradient rounded-[1.35rem] p-5 stat-card reveal">
               <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Tecnología</div>
               <div class="mt-3 text-xl font-extrabold">Signal Assist</div>
               <p class="mt-2 text-sm soft-text leading-6">Una capa adicional para ejecutar sin hacerlo manual.</p>
@@ -636,7 +847,7 @@
 
     <section id="filosofia" class="py-20 sm:py-24 lg:py-28 relative overflow-hidden">
       <div class="wrap relative z-10">
-        <div class="max-w-4xl">
+        <div class="max-w-4xl reveal">
           <p class="section-kicker">Nuestra filosofía</p>
           <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
             No se trata de operar más.<br>
@@ -648,28 +859,28 @@
         </div>
 
         <div class="mt-14 grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
-          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift">
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift reveal">
             <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#gA)" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M4 18h16M6 14l3-3 3 2 5-7 1 1"/></svg>
             </div>
             <h3 class="mt-5 text-xl font-extrabold">Cada operación tiene contexto</h3>
             <p class="mt-3 text-sm soft-text leading-7">Nada entra por impulso. Todo parte de una lectura estructurada del mercado.</p>
           </article>
-          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift">
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift reveal">
             <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#gA)" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7"/></svg>
             </div>
             <h3 class="mt-5 text-xl font-extrabold">No operamos por ansiedad</h3>
             <p class="mt-3 text-sm soft-text leading-7">El filtro importa más que la cantidad. La paciencia también es parte del edge.</p>
           </article>
-          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift">
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift reveal">
             <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#gA)" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
             </div>
             <h3 class="mt-5 text-xl font-extrabold">Claridad sobre velocidad</h3>
             <p class="mt-3 text-sm soft-text leading-7">Preferimos decisiones claras antes que entradas rápidas y mal ejecutadas.</p>
           </article>
-          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift">
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 feature-card lift reveal">
             <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#gA)" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h10v10H7zM4 4h16v16H4z"/></svg>
             </div>
@@ -685,7 +896,7 @@
     <section id="senales" class="py-20 sm:py-24 lg:py-28 overflow-hidden">
       <div class="wrap">
         <div class="grid lg:grid-cols-[0.92fr_1.08fr] gap-14 items-center">
-          <div>
+          <div class="reveal">
             <p class="section-kicker">Cómo se ven las señales</p>
             <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
               Sabes exactamente<br>
@@ -696,21 +907,21 @@
             </p>
 
             <div class="mt-10 space-y-4">
-              <div class="panel outline-gradient rounded-[1.5rem] p-5 step-card flex gap-4 items-start">
+              <div class="panel outline-gradient rounded-[1.5rem] p-5 step-card flex gap-4 items-start reveal">
                 <div class="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-sm font-black text-affinityCyan shrink-0">01</div>
                 <div>
                   <div class="text-lg font-extrabold">Entrada clara</div>
                   <p class="mt-2 text-sm soft-text leading-7">Market o limit, según corresponda. Sin tener que adivinar nada.</p>
                 </div>
               </div>
-              <div class="panel outline-gradient rounded-[1.5rem] p-5 step-card flex gap-4 items-start">
+              <div class="panel outline-gradient rounded-[1.5rem] p-5 step-card flex gap-4 items-start reveal">
                 <div class="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-sm font-black text-affinityBlue shrink-0">02</div>
                 <div>
                   <div class="text-lg font-extrabold">Gestión definida</div>
                   <p class="mt-2 text-sm soft-text leading-7">Stop Loss, TP1, TP2 y TP3 estructurados desde el inicio.</p>
                 </div>
               </div>
-              <div class="panel outline-gradient rounded-[1.5rem] p-5 step-card flex gap-4 items-start">
+              <div class="panel outline-gradient rounded-[1.5rem] p-5 step-card flex gap-4 items-start reveal">
                 <div class="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-sm font-black text-affinityLavender shrink-0">03</div>
                 <div>
                   <div class="text-lg font-extrabold">Seguimiento durante la operación</div>
@@ -720,7 +931,7 @@
             </div>
           </div>
 
-          <div class="relative min-h-[520px] lg:min-h-[700px] flex items-center justify-center">
+          <div class="relative min-h-[520px] lg:min-h-[700px] flex items-center justify-center reveal">
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div class="w-[34rem] h-[34rem] rounded-full bg-[radial-gradient(circle,rgba(56,201,211,.12),transparent_60%)] blur-2xl"></div>
             </div>
@@ -738,12 +949,95 @@
               <div class="text-[11px] uppercase tracking-[0.18em] text-affinityBlue font-extrabold">Seguimiento</div>
             </div>
 
-            <div class="relative z-20 flex items-center justify-center">
-              <div class="panel w-[195px] sm:w-[230px] lg:w-[270px] p-3 rounded-[2rem] rotate-[-5deg] shadow-deep">
-                <img src="assets/signal-screen-1.png" alt="Señal Affinity 1" class="w-full h-auto rounded-[1.4rem] object-cover" />
+            <div class="relative z-20 w-full max-w-[620px] mx-auto flex items-center justify-center py-4 sm:py-6 lg:py-8">
+             <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+               <div class="w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] rounded-full bg-[radial-gradient(circle,rgba(56,201,211,.10),transparent_65%)] blur-3xl"></div>
+             </div>
+
+             <img
+              src="https://raw.githubusercontent.com/omargama20/Affinity/6e1b83ccaa8bf691b697cd2b5fea59c80f16592d/alertas_xauusd-removebg-preview.png"
+              alt="Señal Affinity XAUUSD"
+              class="relative z-20 w-[340px] sm:w-[430px] lg:w-[520px] signal-shot"
+            />
+          </div>
               </div>
-              <div class="panel w-[195px] sm:w-[230px] lg:w-[270px] p-3 rounded-[2rem] -ml-8 sm:-ml-12 lg:-ml-14 rotate-[4deg] z-30 shadow-deep">
-                <img src="assets/signal-screen-2.png" alt="Señal Affinity 2" class="w-full h-auto rounded-[1.4rem] object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="divider-glow"></div></div>
+
+    <section id="demo-recorrido" class="py-20 sm:py-24 lg:py-28 overflow-hidden">
+      <div class="wrap">
+        <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-10 items-stretch">
+          <div class="panel outline-gradient rounded-[2rem] p-6 sm:p-8 lg:p-10 demo-shell reveal flex flex-col justify-between">
+            <div>
+              <p class="section-kicker">Vista previa</p>
+              <h3 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-[-0.04em] leading-tight">Simulación de recorrido en vivo</h3>
+              <p class="mt-5 text-base sm:text-lg soft-text leading-8 max-w-xl">Una representación visual de cómo se siente ver una operación avanzar dentro del ecosistema: activación, recorrido y objetivos alcanzados.</p>
+            </div>
+
+            <div class="mt-8 grid sm:grid-cols-3 gap-4">
+              <div class="blur-card rounded-[1.2rem] p-4 demo-info-card">
+                <div class="text-[11px] uppercase tracking-[0.18em] text-affinityCyan font-extrabold">Activación</div>
+                <p class="mt-2 text-sm soft-text leading-6">La operación entra en ejecución y comienza el seguimiento.</p>
+              </div>
+              <div class="blur-card rounded-[1.2rem] p-4 demo-info-card">
+                <div class="text-[11px] uppercase tracking-[0.18em] text-affinityBlue font-extrabold">Recorrido</div>
+                <p class="mt-2 text-sm soft-text leading-6">El desplazamiento se actualiza paso a paso con claridad.</p>
+              </div>
+              <div class="blur-card rounded-[1.2rem] p-4 demo-info-card">
+                <div class="text-[11px] uppercase tracking-[0.18em] text-affinityLavender font-extrabold">Cierre</div>
+                <p class="mt-2 text-sm soft-text leading-6">TP1, TP2 y TP3 para visualizar el objetivo completo.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-screen p-5 sm:p-6 lg:p-7 reveal flex flex-col justify-between">
+            <div class="flex items-center justify-between gap-4 pb-4 border-b border-white/6">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full bg-white/5 border border-white/8 flex items-center justify-center">
+                  <img src="https://static.vecteezy.com/system/resources/previews/023/986/562/non_2x/telegram-logo-telegram-logo-transparent-telegram-icon-transparent-free-free-png.png" alt="Telegram" class="w-6 h-6 object-contain" />
+                </div>
+                <div>
+                  <p class="text-sm font-extrabold">Affinity Signals</p>
+                  <p class="text-xs uppercase tracking-[0.16em] text-white/40 font-bold">Simulación visual</p>
+                </div>
+              </div>
+              <div class="demo-pill">
+                <span class="w-2 h-2 rounded-full bg-affinityCyan inline-block animate-pulseSoft"></span>
+                activo
+              </div>
+            </div>
+
+            <div class="pt-5 space-y-4 min-h-[250px]">
+              <div class="demo-message is-visible panel rounded-[1.2rem] p-4 bg-white/4 border border-white/8">
+                <p class="text-[11px] uppercase tracking-[0.16em] text-affinityLavender font-extrabold">Señal enviada</p>
+                <p class="mt-2 text-sm sm:text-base font-semibold leading-7">XAUUSD BUY LIMIT · estructura activada para continuidad alcista.</p>
+              </div>
+
+              <div class="ticker-line">
+                <div id="demoTicker" class="demo-message panel rounded-[1.2rem] p-4 bg-white/4 border border-white/8 is-visible">
+                  <p class="text-[11px] uppercase tracking-[0.16em] font-extrabold text-affinityCyan">Operación activada</p>
+                  <p class="mt-2 text-lg sm:text-2xl font-black">ACTIVADA</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3 pt-4 border-t border-white/6">
+              <div class="blur-card rounded-[1rem] p-3 text-center">
+                <p class="text-[11px] uppercase tracking-[0.16em] text-white/40 font-bold">TP1</p>
+                <p id="tp1Status" class="mt-2 text-sm font-extrabold text-white/40">Pendiente</p>
+              </div>
+              <div class="blur-card rounded-[1rem] p-3 text-center">
+                <p class="text-[11px] uppercase tracking-[0.16em] text-white/40 font-bold">TP2</p>
+                <p id="tp2Status" class="mt-2 text-sm font-extrabold text-white/40">Pendiente</p>
+              </div>
+              <div class="blur-card rounded-[1rem] p-3 text-center">
+                <p class="text-[11px] uppercase tracking-[0.16em] text-white/40 font-bold">TP3</p>
+                <p id="tp3Status" class="mt-2 text-sm font-extrabold text-white/40">Pendiente</p>
               </div>
             </div>
           </div>
@@ -755,7 +1049,7 @@
 
     <section class="py-20 sm:py-24 lg:py-28">
       <div class="wrap">
-        <div class="relative lg:pl-20">
+        <div class="relative lg:pl-20 reveal">
           <div class="telegram-badge-wrap">
             <div class="telegram-badge-glow"></div>
             <div class="telegram-badge">
@@ -784,7 +1078,7 @@
     <section id="resultados" class="py-20 sm:py-24 lg:py-28 relative overflow-hidden">
       <div class="orb-pink w-[24rem] h-[24rem] right-0 top-16"></div>
       <div class="wrap relative z-10">
-        <div class="max-w-4xl text-center mx-auto">
+        <div class="max-w-4xl text-center mx-auto reveal">
           <p class="section-kicker">Resultados</p>
           <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
             Resultados visibles.<br>
@@ -794,19 +1088,19 @@
         </div>
 
         <div class="mt-14 grid md:grid-cols-3 gap-6">
-          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 text-center mini-result">
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 text-center mini-result reveal">
             <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">16 - 22 marzo</div>
             <div class="mt-5 text-5xl sm:text-6xl font-black result-number">+5410</div>
             <div class="mt-3 text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Pips acumulados</div>
             <p class="mt-4 text-sm soft-text leading-7">Un periodo que muestra lo que puede pasar cuando hay estructura y timing.</p>
           </article>
-          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 text-center mini-result">
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 text-center mini-result reveal">
             <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">23 - 29 marzo</div>
             <div class="mt-5 text-5xl sm:text-6xl font-black result-number">+2155</div>
             <div class="mt-3 text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Pips acumulados</div>
             <p class="mt-4 text-sm soft-text leading-7">La consistencia también se construye viendo cómo se repite el proceso.</p>
           </article>
-          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 text-center mini-result">
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 text-center mini-result reveal">
             <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">30 marzo - 5 abril</div>
             <div class="mt-5 text-5xl sm:text-6xl font-black result-number">+620</div>
             <div class="mt-3 text-[11px] uppercase tracking-[0.18em] text-white/60 font-extrabold">Pips acumulados</div>
@@ -821,7 +1115,7 @@
     <section id="signal-assist" class="py-20 sm:py-24 lg:py-28 overflow-hidden">
       <div class="wrap">
         <div class="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-14 items-center">
-          <div class="panel outline-gradient rounded-[2rem] sm:rounded-[2.3rem] p-7 sm:p-10 lg:p-12">
+          <div class="panel outline-gradient rounded-[2rem] sm:rounded-[2.3rem] p-7 sm:p-10 lg:p-12 reveal">
             <p class="section-kicker">Tecnología Affinity</p>
             <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
               Para no depender de estar<br>
@@ -830,11 +1124,11 @@
             <p class="mt-6 text-lg soft-text leading-8 max-w-2xl">Affinity Signal Assist conecta las señales con tu cuenta de trading. Sin copiar manualmente. Reduciendo retrasos en la ejecución. Manteniendo una experiencia más consistente.</p>
 
             <div class="mt-10 grid sm:grid-cols-2 gap-4">
-              <div class="blur-card rounded-[1.4rem] p-5">
+              <div class="blur-card rounded-[1.4rem] p-5 reveal">
                 <div class="text-sm font-extrabold">Conexión directa con MT5</div>
                 <p class="mt-3 text-sm soft-text leading-7">Integra mejor la señal con tu ejecución sin depender de hacerlo a mano.</p>
               </div>
-              <div class="blur-card rounded-[1.4rem] p-5">
+              <div class="blur-card rounded-[1.4rem] p-5 reveal">
                 <div class="text-sm font-extrabold">Múltiples cuentas</div>
                 <p class="mt-3 text-sm soft-text leading-7">Pensado para una operación más flexible y ordenada.</p>
               </div>
@@ -846,18 +1140,14 @@
             </div>
           </div>
 
-          <div class="relative min-h-[420px] sm:min-h-[480px] lg:min-h-[560px] flex items-center justify-center">
+          <div class="affy-stack reveal">
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div class="w-[32rem] h-[32rem] rounded-full bg-[radial-gradient(circle,rgba(143,71,169,.16),transparent_62%)] blur-2xl"></div>
+              <div class="w-[34rem] h-[34rem] rounded-full bg-[radial-gradient(circle,rgba(143,71,169,.16),transparent_62%)] blur-2xl"></div>
             </div>
 
-            <div class="panel w-[210px] sm:w-[250px] lg:w-[270px] p-3 rounded-[2rem] z-10 shadow-deep rotate-[-6deg]">
-              <img src="https://www.ifcmarkets.com/upload/images/mt5_ios.png" alt="MT5 iOS" class="w-full h-auto rounded-[1.3rem] object-contain" />
-            </div>
-
-            <div class="relative z-20 w-[220px] sm:w-[280px] lg:w-[350px] -ml-6 sm:-ml-10 lg:-ml-12">
-              <img src="assets/affy.png" alt="Affy" class="w-full h-auto object-contain drop-shadow-[0_28px_80px_rgba(143,71,169,.34)]" />
-            </div>
+            <img src="https://raw.githubusercontent.com/omargama20/Affinity/6e1b83ccaa8bf691b697cd2b5fea59c80f16592d/metatrader%20iphone.png" alt="MT5 iPhone izquierdo" class="mt5-phone-left" />
+            <img src="https://raw.githubusercontent.com/omargama20/Affinity/6e1b83ccaa8bf691b697cd2b5fea59c80f16592d/metatrader%20iphone.png" alt="MT5 iPhone derecho" class="mt5-phone-right" />
+            <img src="https://raw.githubusercontent.com/omargama20/Affinity/6e1b83ccaa8bf691b697cd2b5fea59c80f16592d/Affy_Asistente_Telegram-removebg-preview.png" alt="Affy" class="affy-center affy-bot" />
           </div>
         </div>
       </div>
@@ -867,7 +1157,7 @@
 
     <section class="py-20 sm:py-24 lg:py-28">
       <div class="wrap">
-        <div class="text-center max-w-4xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto reveal">
           <p class="section-kicker">Testimonios</p>
           <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
             Lo que dice<br>
@@ -876,22 +1166,22 @@
         </div>
 
         <div class="mt-14 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
-          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card">
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card reveal">
             <div class="text-affinityPink text-lg tracking-[0.25em]">★★★★★</div>
             <p class="mt-5 text-sm soft-text leading-7">“Al principio entré solo a ver resultados… y ya con eso me convencí solo.”</p>
             <div class="mt-6 text-sm font-extrabold">Carlos, México</div>
           </article>
-          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card">
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card reveal">
             <div class="text-affinityPink text-lg tracking-[0.25em]">★★★★★</div>
             <p class="mt-5 text-sm soft-text leading-7">“Lo que más me cambió fue dejar de entrar a todo… aquí te enseñan a esperar.”</p>
             <div class="mt-6 text-sm font-extrabold">Mateo, Colombia</div>
           </article>
-          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card">
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card reveal">
             <div class="text-affinityPink text-lg tracking-[0.25em]">★★★★★</div>
             <p class="mt-5 text-sm soft-text leading-7">“No es perfecto, pero sí es mucho más claro que todo lo que había probado antes.”</p>
             <div class="mt-6 text-sm font-extrabold">Sergio, España</div>
           </article>
-          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card">
+          <article class="panel outline-gradient rounded-[1.8rem] p-6 quote-card reveal">
             <div class="text-affinityPink text-lg tracking-[0.25em]">★★★★★</div>
             <p class="mt-5 text-sm soft-text leading-7">“Con el copier ya no ando corriendo para meter las entradas… eso me ayudó bastante.”</p>
             <div class="mt-6 text-sm font-extrabold">Alan, México</div>
@@ -904,7 +1194,7 @@
 
     <section id="planes" class="py-20 sm:py-24 lg:py-28">
       <div class="wrap">
-        <div class="text-center max-w-4xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto reveal">
           <p class="section-kicker">Acceso</p>
           <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
             Elige cómo quieres<br>
@@ -914,7 +1204,7 @@
         </div>
 
         <div class="mt-14 pricing-wrap">
-          <article class="panel outline-gradient pricing-card">
+          <article class="panel outline-gradient pricing-card reveal">
             <div>
               <div class="label-top">Acceso independiente</div>
               <h3 class="mt-6 text-3xl sm:text-4xl font-black tracking-[-0.03em]">Pago único</h3>
@@ -936,7 +1226,7 @@
             </div>
           </article>
 
-          <article class="panel outline-gradient pricing-card pricing-popular relative">
+          <article class="panel outline-gradient pricing-card pricing-popular relative reveal">
             <div class="popular-pill">Más popular</div>
             <div class="pt-10 md:pt-12">
               <div class="label-top text-affinityLavender">Pro Partner</div>
@@ -961,7 +1251,7 @@
             </div>
           </article>
 
-          <article class="panel outline-gradient pricing-card">
+          <article class="panel outline-gradient pricing-card reveal">
             <div>
               <div class="label-top">Acceso mensual</div>
               <h3 class="mt-6 text-3xl sm:text-4xl font-black tracking-[-0.03em]">Sin compromiso</h3>
@@ -990,7 +1280,7 @@
 
     <section class="py-20 sm:py-24 lg:py-28">
       <div class="wrap">
-        <div class="text-center max-w-4xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto reveal">
           <p class="section-kicker">Próximamente</p>
           <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.04em] leading-tight">
             Esto apenas<br>
@@ -1000,7 +1290,7 @@
         </div>
 
         <div class="mt-14 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 min-h-[260px] soon-card flex flex-col justify-between">
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 min-h-[260px] soon-card flex flex-col justify-between reveal">
             <div>
               <p class="section-kicker">Education</p>
               <h3 class="mt-8 text-3xl sm:text-[2.15rem] font-black tracking-[-0.03em] leading-tight">IBs University</h3>
@@ -1008,7 +1298,7 @@
             </div>
           </article>
 
-          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 min-h-[260px] soon-card flex flex-col justify-between">
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 min-h-[260px] soon-card flex flex-col justify-between reveal">
             <div>
               <p class="section-kicker">Tech</p>
               <h3 class="mt-8 text-3xl sm:text-[2.15rem] font-black tracking-[-0.03em] leading-tight">Trading Algorítmico</h3>
@@ -1016,7 +1306,7 @@
             </div>
           </article>
 
-          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 min-h-[260px] soon-card flex flex-col justify-between">
+          <article class="panel outline-gradient rounded-[2rem] p-7 sm:p-8 min-h-[260px] soon-card flex flex-col justify-between reveal">
             <div>
               <p class="section-kicker">Academy</p>
               <h3 class="mt-8 text-3xl sm:text-[2.15rem] font-black tracking-[-0.03em] leading-tight">Academia de Trading</h3>
@@ -1031,7 +1321,7 @@
 
     <section class="py-20 sm:py-24 lg:py-28">
       <div class="wrap">
-        <div class="rounded-[2rem] sm:rounded-[2.6rem] p-[1px] bg-[linear-gradient(135deg,rgba(56,201,211,.18),rgba(176,141,206,.20),rgba(143,71,169,.28))] shadow-purple">
+        <div class="rounded-[2rem] sm:rounded-[2.6rem] p-[1px] bg-[linear-gradient(135deg,rgba(56,201,211,.18),rgba(176,141,206,.20),rgba(143,71,169,.28))] shadow-purple reveal">
           <div class="relative rounded-[2rem] sm:rounded-[2.6rem] bg-[linear-gradient(180deg,rgba(9,11,18,.96),rgba(6,7,12,1))] px-6 py-14 sm:px-10 sm:py-16 lg:px-16 lg:py-20 text-center overflow-hidden">
             <div class="absolute inset-0 pointer-events-none">
               <div class="orb-cyan w-[26rem] h-[26rem] left-[-10%] top-0"></div>
@@ -1059,7 +1349,7 @@
     <div class="wrap py-14 lg:py-16">
       <div class="grid lg:grid-cols-[1.2fr_0.8fr_0.8fr] gap-10">
         <div>
-          <img src="assets/affinity-logo.png" alt="Affinity" class="h-12 w-auto object-contain footer-logo" />
+          <img src="https://raw.githubusercontent.com/omargama20/Affinity/6e1b83ccaa8bf691b697cd2b5fea59c80f16592d/Gemini_Generated_Image_k0fsilk0fsilk0fs__1_-removebg-preview.png" alt="Affinity" class="h-12 w-auto object-contain footer-logo" />
           <p class="mt-6 text-sm soft-text leading-7 max-w-2xl">Operar en mercados financieros implica riesgo. Nada garantiza resultados, pero sí puedes mejorar tu proceso con una mejor estructura, mejor ejecución y una comunidad más clara.</p>
         </div>
 
@@ -1100,5 +1390,84 @@
       </linearGradient>
     </defs>
   </svg>
+
+  <script>
+    (function () {
+      const revealEls = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      revealEls.forEach((el, index) => {
+        el.style.transitionDelay = `${Math.min(index * 40, 240)}ms`;
+        revealObserver.observe(el);
+      });
+
+      const ticker = document.getElementById('demoTicker');
+      const tp1Status = document.getElementById('tp1Status');
+      const tp2Status = document.getElementById('tp2Status');
+      const tp3Status = document.getElementById('tp3Status');
+
+      const sequence = [
+        { label: 'Operación activada', value: 'ACTIVADA', color: 'text-affinityCyan' },
+        { label: 'Recorrido actual', value: '+35 pips', color: 'text-white' },
+        { label: 'Recorrido actual', value: '+80 pips', color: 'text-white' },
+        { label: 'Recorrido actual', value: '+150 pips', color: 'text-white' },
+        { label: 'Recorrido actual', value: '+230 pips', color: 'text-white' },
+        { label: 'Recorrido actual', value: '+320 pips 🚀', color: 'text-affinityLavender' },
+        { label: 'Objetivo alcanzado', value: 'TP1 alcanzado', color: 'text-affinityCyan', tp: 1 },
+        { label: 'Objetivo alcanzado', value: 'TP2 alcanzado', color: 'text-affinityBlue', tp: 2 },
+        { label: 'Objetivo alcanzado', value: 'TP3 alcanzado 🏆', color: 'text-affinityPink', tp: 3 }
+      ];
+
+      let pointer = 0;
+
+      function renderStep(item) {
+        ticker.classList.remove('is-visible');
+        setTimeout(() => {
+          ticker.innerHTML = `
+            <p class="text-[11px] uppercase tracking-[0.16em] font-extrabold ${item.color}">${item.label}</p>
+            <p class="mt-2 text-lg sm:text-2xl font-black">${item.value}</p>
+          `;
+          ticker.classList.add('is-visible');
+
+          if (item.tp === 1) {
+            tp1Status.textContent = 'Alcanzado';
+            tp1Status.className = 'mt-2 text-sm font-extrabold text-affinityCyan';
+          }
+          if (item.tp === 2) {
+            tp2Status.textContent = 'Alcanzado';
+            tp2Status.className = 'mt-2 text-sm font-extrabold text-affinityBlue';
+          }
+          if (item.tp === 3) {
+            tp3Status.textContent = 'TP3 🏆';
+            tp3Status.className = 'mt-2 text-sm font-extrabold text-affinityPink';
+          }
+        }, 160);
+      }
+
+      renderStep(sequence[0]);
+      pointer = 1;
+
+      setInterval(() => {
+        renderStep(sequence[pointer]);
+        pointer = (pointer + 1) % sequence.length;
+
+        if (pointer === 0) {
+          tp1Status.textContent = 'Pendiente';
+          tp1Status.className = 'mt-2 text-sm font-extrabold text-white/40';
+          tp2Status.textContent = 'Pendiente';
+          tp2Status.className = 'mt-2 text-sm font-extrabold text-white/40';
+          tp3Status.textContent = 'Pendiente';
+          tp3Status.className = 'mt-2 text-sm font-extrabold text-white/40';
+        }
+      }, 1450);
+    })();
+  </script>
 </body>
 </html>
