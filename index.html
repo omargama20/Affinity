@@ -779,9 +779,428 @@
         padding: 18px !important;
       }
     }
+  
+    .promo-exit-wrap {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: rgba(2, 4, 10, 0.72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .promo-exit-wrap.is-visible {
+      display: flex;
+      animation: promoFadeIn .28s ease;
+    }
+
+    @keyframes promoFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .promo-exit-modal {
+      width: min(100%, 1120px);
+      min-height: 560px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 18% 50%, rgba(56,201,211,.07), transparent 22%),
+        radial-gradient(circle at 82% 68%, rgba(176,141,206,.10), transparent 26%),
+        linear-gradient(180deg, rgba(8,11,19,.96), rgba(4,7,14,.985));
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow:
+        0 34px 120px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.04);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .promo-exit-modal::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.045), transparent 22%);
+      pointer-events: none;
+    }
+
+    .promo-exit-modal::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(56,201,211,.16), rgba(176,141,206,.13), rgba(143,71,169,.18));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .promo-exit-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 6;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.58);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      transition: .22s ease;
+    }
+
+    .promo-exit-close:hover {
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .promo-exit-content {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 16px;
+      align-items: center;
+      min-height: 560px;
+      padding: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .promo-exit-art {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 2px 8px 0;
+    }
+
+    .promo-exit-art::before {
+      content: '';
+      position: absolute;
+      inset: 10% 8%;
+      background:
+        radial-gradient(circle at 40% 42%, rgba(56,201,211,.12), transparent 28%),
+        radial-gradient(circle at 58% 62%, rgba(176,141,206,.14), transparent 24%);
+      filter: blur(34px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .promo-exit-art img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 540px;
+      max-height: 420px;
+      object-fit: contain;
+      filter:
+        drop-shadow(0 0 18px rgba(56,201,211,.10))
+        drop-shadow(0 0 30px rgba(176,141,206,.10));
+    }
+
+    .promo-exit-panel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px 4px 2px 0;
+    }
+
+    .promo-exit-card {
+      width: min(100%, 430px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      text-align: center;
+    }
+
+    .promo-exit-eyebrow {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: rgba(231,238,249,.82);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .promo-exit-eyebrow::before,
+    .promo-exit-eyebrow::after {
+      content: '';
+      height: 1px;
+      flex: 1 1 auto;
+      background: linear-gradient(90deg, rgba(56,201,211,.9), rgba(176,141,206,.75));
+      opacity: .7;
+    }
+
+    .promo-exit-timer {
+      width: 100%;
+      position: relative;
+      border-radius: 24px;
+      padding: 18px 12px;
+      background: linear-gradient(180deg, rgba(6,10,18,.98), rgba(5,8,15,.99));
+      border: 1px solid rgba(103,137,192,.58);
+      box-shadow:
+        inset 0 0 30px rgba(255,255,255,.015),
+        0 0 18px rgba(103,137,192,.16),
+        0 0 40px rgba(56,201,211,.08);
+      overflow: hidden;
+    }
+
+    .promo-exit-timer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(56,201,211,.12), transparent 60%);
+      pointer-events: none;
+    }
+
+    .promo-exit-timer-value {
+      position: relative;
+      z-index: 2;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: .9;
+      letter-spacing: -.04em;
+      color: #c7ffff;
+      font-variant-numeric: tabular-nums;
+      text-shadow:
+        0 0 8px rgba(255,255,255,.42),
+        0 0 20px rgba(143,244,255,.55),
+        0 0 44px rgba(56,201,211,.30);
+    }
+
+    .promo-exit-old {
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      color: rgba(233,226,247,.72);
+      text-decoration: line-through;
+      text-decoration-thickness: 3px;
+    }
+
+    .promo-exit-label {
+      font-size: clamp(.88rem, 1.4vw, 1.1rem);
+      color: rgba(233,226,247,.84);
+      font-weight: 700;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+
+    .promo-exit-price {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: -2px;
+    }
+
+    .promo-exit-new {
+      font-size: clamp(3rem, 5.5vw, 4.8rem);
+      line-height: .84;
+      font-weight: 900;
+      letter-spacing: -.09em;
+      color: #9ffcff;
+      text-shadow:
+        0 0 8px rgba(255,255,255,.50),
+        0 0 22px rgba(143,244,255,.65),
+        0 0 50px rgba(56,201,211,.30);
+    }
+
+    .promo-exit-usd {
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      font-weight: 800;
+      color: rgba(238,243,255,.92);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .promo-exit-cta {
+      width: 100%;
+      min-height: 62px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      font-size: clamp(1rem, 1.4vw, 1.18rem);
+      font-weight: 900;
+      letter-spacing: .02em;
+      color: #fff;
+      background: linear-gradient(90deg, rgba(93,132,255,.98), rgba(147,117,243,.98), rgba(225,99,207,.98));
+      box-shadow:
+        0 20px 46px rgba(110,54,174,.34),
+        0 0 26px rgba(223,97,207,.14),
+        inset 0 0 0 1px rgba(255,255,255,.12);
+      transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+    }
+
+    .promo-exit-cta:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 24px 54px rgba(110,54,174,.42),
+        0 0 30px rgba(223,97,207,.18),
+        inset 0 0 0 1px rgba(255,255,255,.14);
+    }
+
+    .promo-exit-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.20), transparent);
+      transform: translateX(-130%);
+      animation: shimmer 4s linear infinite;
+    }
+
+    .promo-exit-cta span {
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 1023px) {
+      .promo-exit-content {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 10px;
+      }
+
+      .promo-exit-art {
+        min-height: 260px;
+        padding: 0;
+      }
+
+      .promo-exit-art img {
+        max-height: 260px;
+      }
+
+      .promo-exit-panel {
+        padding: 0;
+      }
+
+      .promo-exit-card {
+        width: 100%;
+        max-width: 520px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .promo-exit-wrap {
+        align-items: flex-end;
+        padding: 10px;
+      }
+
+      .promo-exit-modal {
+        border-radius: 22px;
+      }
+
+      .promo-exit-content {
+        padding: 12px;
+        gap: 10px;
+      }
+
+      .promo-exit-art {
+        min-height: 170px;
+      }
+
+      .promo-exit-art img {
+        max-height: 170px;
+      }
+
+      .promo-exit-close {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+      }
+
+      .promo-exit-timer {
+        border-radius: 18px;
+        padding: 14px 10px;
+      }
+
+      .promo-exit-cta {
+        min-height: 54px;
+        border-radius: 16px;
+        font-size: .95rem;
+      }
+
+      .promo-exit-eyebrow {
+        font-size: 9px;
+        gap: 8px;
+        letter-spacing: .18em;
+      }
+    }
+
   </style>
 </head>
 <body>
+
+  <div class="promo-exit-wrap" id="promoExitWrap">
+    <div class="promo-exit-modal" id="promoExitModal">
+      <button class="promo-exit-close" id="promoExitClose" aria-label="Cerrar promo">×</button>
+
+      <div class="promo-exit-content">
+        <div class="promo-exit-art">
+          <img
+            src="https://raw.githubusercontent.com/omargama20/Affinity/a062fd93942781b8ff75059e0874c76e2c22ff15/Descuento%20en%20ne%C3%B3n%20brillante.png"
+            alt="50% OFF neon Affinity"
+          />
+        </div>
+
+        <div class="promo-exit-panel">
+          <div class="promo-exit-card">
+            <div class="promo-exit-eyebrow">Acceso limitado</div>
+
+            <div class="promo-exit-timer">
+              <div class="promo-exit-timer-value" id="promoExitTimerValue">10:00</div>
+            </div>
+
+            <div class="promo-exit-old">$100 USD</div>
+
+            <div class="promo-exit-label">Ahora sólo</div>
+
+            <div class="promo-exit-price">
+              <div class="promo-exit-new">$50</div>
+              <div class="promo-exit-usd">USD</div>
+            </div>
+
+            <a
+              class="promo-exit-cta"
+              href="https://t.me/gamaomar?text=Quiero%20aprovechar%20la%20promo%20de%20Affinity%20por%20%2450"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>QUIERO APROVECHAR</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="sticky-float hidden md:block">
     <a href="https://t.me/gamaomar?text=Quiero%20informaci%C3%B3n%20sobre%20Affinity" target="_blank" rel="noopener noreferrer">
       <img src="https://static.vecteezy.com/system/resources/previews/023/986/562/non_2x/telegram-logo-telegram-logo-transparent-telegram-icon-transparent-free-free-png.png" alt="Telegram">
@@ -1501,6 +1920,105 @@
           tp3Status.className = 'mt-2 text-sm font-extrabold text-white/40';
         }
       }, 1450);
+
+      const promoExitWrap = document.getElementById('promoExitWrap');
+      const promoExitModal = document.getElementById('promoExitModal');
+      const promoExitClose = document.getElementById('promoExitClose');
+      const promoExitTimerValue = document.getElementById('promoExitTimerValue');
+      const planesSection = document.getElementById('planes');
+
+      const promoSeenKey = 'affinity_exit_promo_seen_v2';
+      const promoExpiryKey = 'affinity_exit_promo_expiry_v2';
+
+      let promoShown = sessionStorage.getItem(promoSeenKey) === '1';
+      let afterPlanesTimer = null;
+      let promoInterval = null;
+      let passedPlanes = false;
+
+      function formatPromoExitTime(totalSeconds) {
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      }
+
+      function closePromoExit() {
+        if (!promoExitWrap || !promoExitWrap.classList.contains('is-visible')) return;
+        promoExitWrap.style.opacity = '0';
+        setTimeout(() => {
+          promoExitWrap.classList.remove('is-visible');
+          promoExitWrap.style.opacity = '';
+        }, 220);
+      }
+
+      function startPromoCountdown() {
+        const now = Date.now();
+        let expiry = parseInt(localStorage.getItem(promoExpiryKey) || '0', 10);
+
+        if (!expiry || expiry <= now) {
+          expiry = now + (10 * 60 * 1000);
+          localStorage.setItem(promoExpiryKey, String(expiry));
+        }
+
+        function updateTimer() {
+          const remainingMs = expiry - Date.now();
+          const remainingSeconds = Math.max(0, Math.floor(remainingMs / 1000));
+          promoExitTimerValue.textContent = formatPromoExitTime(remainingSeconds);
+
+          if (remainingSeconds <= 0) {
+            clearInterval(promoInterval);
+            closePromoExit();
+          }
+        }
+
+        updateTimer();
+        promoInterval = setInterval(updateTimer, 1000);
+      }
+
+      function showPromoExit() {
+        if (promoShown || !promoExitWrap) return;
+
+        promoShown = true;
+        sessionStorage.setItem(promoSeenKey, '1');
+        promoExitWrap.classList.add('is-visible');
+        startPromoCountdown();
+      }
+
+      if (promoExitClose) {
+        promoExitClose.addEventListener('click', () => {
+          closePromoExit();
+          if (promoInterval) clearInterval(promoInterval);
+        });
+      }
+
+      if (planesSection) {
+        const planesObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+              passedPlanes = true;
+            }
+          });
+        }, { threshold: 0.1 });
+
+        planesObserver.observe(planesSection);
+
+        window.addEventListener('scroll', () => {
+          if (!passedPlanes || promoShown) return;
+
+          clearTimeout(afterPlanesTimer);
+          afterPlanesTimer = setTimeout(() => {
+            showPromoExit();
+          }, 2800);
+        }, { passive: true });
+      }
+
+      document.addEventListener('mouseleave', (event) => {
+        if (promoShown) return;
+        if (window.innerWidth < 1024) return;
+        if (event.clientY <= 0) {
+          showPromoExit();
+        }
+      });
+
     })();
   </script>
 </body>
