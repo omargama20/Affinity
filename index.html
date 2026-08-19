@@ -2,133 +2,351 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Affinity Trading</title>
   <meta name="description" content="Affinity Trading — señales, educación y comunidad.">
   <meta name="theme-color" content="#03050a">
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="aurora aurora-a"></div><div class="aurora aurora-b"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
 
-  <nav class="nav">
-    <div class="shell nav-in">
-      <a href="#inicio" class="logo"><img src="assets/affinity-logo.jpg" alt="Affinity"></a>
-      <div class="nav-links">
-        <a href="#inicio">inicio</a><a href="#canales">canales</a><a href="#curso">curso</a><a href="#resultados">resultados</a><a href="#comunidad">comunidad</a>
-      </div>
-      <a class="nav-telegram" href="#canales">acceso a telegram <span>↗</span></a>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a href="#inicio" class="brand" aria-label="Affinity Trading">
+        <img src="assets/affinity-logo.jpg" alt="Affinity">
+      </a>
+      <nav class="desktop-nav" aria-label="Principal">
+        <a href="#inicio">inicio</a>
+        <a href="#resultados">resultados</a>
+        <a href="#canales">canales</a>
+        <a href="#curso">curso</a>
+        <a href="#comunidad">comunidad</a>
+      </nav>
+      <a class="telegram-top" href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">
+        <span class="tg-icon" aria-hidden="true">↗</span>
+        acceso a telegram
+      </a>
+      <button class="mobile-menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
     </div>
-  </nav>
+    <div class="mobile-drawer">
+      <a href="#inicio">inicio</a>
+      <a href="#resultados">resultados</a>
+      <a href="#canales">canales</a>
+      <a href="#curso">curso</a>
+      <a href="#comunidad">comunidad</a>
+    </div>
+  </header>
 
   <main>
+    <!-- 01 HERO -->
     <section id="inicio" class="hero shell reveal">
       <div class="hero-copy">
-        <div class="overline"><i></i> affinity trading</div>
-        <h1><span class="light">affinity</span><br><span class="bold">trading</span><em>.</em></h1>
-        <div class="hero-tags"><span>educación</span><i></i><span>señales</span><i></i><span>comunidad</span></div>
+        <div class="tiny-label">affinity trading</div>
+        <h1><span class="thin">affinity</span><br><strong>trading</strong><em>.</em></h1>
+        <div class="hero-line"><span>señales</span><i></i><span>educación</span><i></i><span>comunidad</span></div>
         <div class="hero-actions">
-          <a class="btn primary" href="#canales">explorar canales <b>↗</b></a>
-          <a class="btn ghost" href="#resultados">ver resultados <b>⌁</b></a>
+          <a class="btn primary" href="#canales">explorar canales <b>→</b></a>
+          <a class="btn secondary" href="#resultados">ver resultados <b>→</b></a>
         </div>
       </div>
 
-      <div class="hero-market" aria-label="visual de mercado">
-        <div class="market-label"><span>XAUUSD</span><b>Affinity Market View</b></div>
-        <svg class="candles" viewBox="0 0 820 430" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#695cff" stop-opacity=".22"/><stop offset="1" stop-color="#00c8ff" stop-opacity="0"/></linearGradient>
-            <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#982dff"/><stop offset=".45" stop-color="#5e55ff"/><stop offset="1" stop-color="#00b9ff"/></linearGradient>
-          </defs>
-          <g class="grid"><path d="M0 86H820M0 172H820M0 258H820M0 344H820"/><path d="M136 0V430M272 0V430M408 0V430M544 0V430M680 0V430"/></g>
-          <path class="area" d="M0 344 C60 305,93 367,145 312 S235 275,275 306 S343 241,383 264 S460 214,510 224 S598 176,647 193 S725 128,820 96 L820 430 L0 430Z"/>
-          <path class="trend" d="M0 344 C60 305,93 367,145 312 S235 275,275 306 S343 241,383 264 S460 214,510 224 S598 176,647 193 S725 128,820 96"/>
-          <g id="bars"></g>
-        </svg>
-        <div class="floating-pip float">XAUUSD 1H <b>+342.7 pips</b></div>
+      <div class="hero-visual">
+        <div class="market-tag">
+          <span>XAUUSD 1H</span>
+          <b>+342.7 pips</b>
+        </div>
+        <div class="chart-stage">
+          <svg viewBox="0 0 900 470" preserveAspectRatio="none" class="hero-chart" aria-hidden="true">
+            <defs>
+              <linearGradient id="heroLine" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#0a87ff"/>
+                <stop offset=".48" stop-color="#5b55ff"/>
+                <stop offset="1" stop-color="#a02dff"/>
+              </linearGradient>
+              <linearGradient id="heroFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#5265ff" stop-opacity=".23"/>
+                <stop offset="1" stop-color="#5265ff" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <g class="grid">
+              <path d="M0 94H900M0 188H900M0 282H900M0 376H900"/>
+              <path d="M150 0V470M300 0V470M450 0V470M600 0V470M750 0V470"/>
+            </g>
+            <path class="area" d="M0 360 C55 325 85 376 140 332 S220 302 267 326 S340 273 390 288 S460 236 510 252 S585 206 642 220 S718 165 774 174 S842 122 900 96 L900 470L0 470Z"/>
+            <path class="trend" d="M0 360 C55 325 85 376 140 332 S220 302 267 326 S340 273 390 288 S460 236 510 252 S585 206 642 220 S718 165 774 174 S842 122 900 96"/>
+            <g id="candleGroup"></g>
+          </svg>
+        </div>
 
-        <div class="phone float2">
-          <div class="phone-top"><span>9:39</span><span>● ● ●</span></div>
-          <div class="tg-title"><div class="tg-avatar">A</div><div><b>Affinity Trading</b><small>señales activas</small></div></div>
-          <div class="signal-card">
-            <div class="signal-symbol">XAUUSD <span>COMPRA</span></div>
-            <div class="signal-line"><span>Entrada</span><b>2345.25</b></div>
-            <div class="signal-line"><span>SL</span><b>2333.20</b></div>
-            <div class="signal-line"><span>TP1</span><b>2355.80</b></div>
-            <div class="signal-line"><span>TP2</span><b>2363.40</b></div>
-            <div class="signal-line"><span>TP3</span><b>2375.60</b></div>
-            <div class="score"><span>score</span><b>8.7 / 10</b></div>
+        <div class="phone-card float-device">
+          <div class="phone-notch"></div>
+          <div class="phone-status"><span>9:39</span><span>•••</span></div>
+          <div class="phone-channel">
+            <img src="assets/affinity-logo.jpg" alt="">
+            <div><b>Affinity Trading</b><small>señales activas</small></div>
           </div>
-          <div class="phone-brand">Affinity Trading</div>
+          <div class="phone-signal">
+            <div class="signal-title">XAUUSD <span>COMPRA</span></div>
+            <div class="sig-row"><span>Entrada</span><b>2345.25</b></div>
+            <div class="sig-row"><span>SL</span><b>2333.20</b></div>
+            <div class="sig-row"><span>TP1</span><b>2355.80</b></div>
+            <div class="sig-row"><span>TP2</span><b>2363.40</b></div>
+            <div class="sig-row"><span>TP3</span><b>2375.60</b></div>
+            <div class="sig-score"><span>score</span><b>8.7/10</b></div>
+          </div>
+          <div class="phone-footer">Affinity Trading</div>
         </div>
       </div>
 
-      <aside class="hero-side">
-        <div class="side-card"><span>señales promedio / día</span><strong>5–8</strong><div class="mini-line"></div></div>
-        <div class="side-card"><span>operativa</span><strong>desde marzo</strong><div class="status"><i></i> activa</div></div>
+      <aside class="hero-kpis">
+        <div class="mini-kpi">
+          <span>señales promedio / día</span>
+          <strong>5–6</strong>
+          <div class="micrograph purple"></div>
+        </div>
+        <div class="mini-kpi">
+          <span>operativa</span>
+          <strong class="small-strong">desde marzo</strong>
+          <div class="active-dot"><i></i> activa</div>
+        </div>
       </aside>
     </section>
 
-    <section id="resultados" class="shell results reveal">
-      <div class="section-label">resultados registrados</div>
+    <!-- 02 RESULTS -->
+    <section id="resultados" class="results shell reveal">
+      <div class="section-heading">
+        <h2><span class="thin">resultados desde</span> <strong>marzo</strong></h2>
+      </div>
+
       <div class="results-grid">
-        <article class="result-card">
-          <header><span class="orb purple">$</span><div><b>forex & xauusd</b><small>16 mar → 3 abr 2026</small></div></header>
-          <div class="stats">
-            <div><span>señales</span><strong class="counter" data-target="30">0</strong></div>
-            <div><span>ganadas</span><strong class="counter" data-target="29">0</strong><small class="positive">96.7%</small></div>
-            <div><span>perdidas</span><strong class="counter" data-target="1">0</strong><small>3.3%</small></div>
-            <div><span>pips</span><strong class="positive">+8,185</strong></div>
+        <article class="result-panel result-blue">
+          <div class="result-title">
+            <img src="assets/affinity-logo.jpg" alt="">
+            <div><span>FOREX & XAUUSD</span><small>Affinity Signals</small></div>
           </div>
-          <svg class="spark" viewBox="0 0 600 120" preserveAspectRatio="none"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8c38ff" stop-opacity=".28"/><stop offset="1" stop-color="#8c38ff" stop-opacity="0"/></linearGradient></defs><path class="sparkfill" d="M0 105 C50 94,62 80,105 88 S175 65,213 73 S276 42,320 50 S392 26,430 34 S525 17,600 5 L600 120L0 120Z" fill="url(#g1)"/><path d="M0 105 C50 94,62 80,105 88 S175 65,213 73 S276 42,320 50 S392 26,430 34 S525 17,600 5"/></svg>
+          <div class="metrics metrics-five">
+            <div><span>señales</span><strong>30</strong></div>
+            <div><span>ganadas</span><strong>29</strong></div>
+            <div><span>perdidas</span><strong>1</strong></div>
+            <div><span>win rate</span><strong>96.7%</strong></div>
+            <div><span>pips</span><strong>+8,185</strong></div>
+          </div>
+          <div class="result-graph line-blue"></div>
         </article>
-        <article class="result-card blue-card">
-          <header><span class="orb blue">↯</span><div><b>sintéticos · volatility 75</b><small>operativa activa desde marzo</small></div></header>
-          <div class="stats synthetic-stats">
-            <div><span>ritmo objetivo</span><strong>5–8</strong><small>setups / día</small></div>
+
+        <article class="result-panel result-purple">
+          <div class="result-title">
+            <img src="assets/affinity-logo.jpg" alt="">
+            <div><span>VOLATILITY 75</span><small>Affinity Synthetics</small></div>
+          </div>
+          <div class="metrics">
+            <div><span>ritmo diario</span><strong>5–8</strong></div>
             <div><span>mercado</span><strong>V75</strong></div>
-            <div><span>sesiones</span><strong>diarias</strong></div>
-            <div><span>estado</span><strong class="active-word">activo</strong></div>
+            <div><span>estado</span><strong>activo</strong></div>
+            <div><span>desde</span><strong>marzo</strong></div>
           </div>
-          <svg class="spark blue-spark" viewBox="0 0 600 120" preserveAspectRatio="none"><defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#008dff" stop-opacity=".25"/><stop offset="1" stop-color="#008dff" stop-opacity="0"/></linearGradient></defs><path class="sparkfill" d="M0 108 C45 90,60 102,92 82 S145 91,177 70 S230 76,267 52 S325 64,360 42 S425 46,463 24 S530 29,600 8 L600 120L0 120Z" fill="url(#g2)"/><path d="M0 108 C45 90,60 102,92 82 S145 91,177 70 S230 76,267 52 S325 64,360 42 S425 46,463 24 S530 29,600 8"/></svg>
+          <div class="result-graph line-purple"></div>
         </article>
       </div>
     </section>
 
-    <section id="canales" class="shell access reveal">
-      <div class="section-label">acceso rápido</div>
-      <div class="access-grid">
-        <a class="access-card violet tilt" href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">
-          <div class="pill">opened</div><span>affinity synthetics</span><h3>volatility 75</h3><div class="animated-chart chart-purple"></div><footer>ir al canal <b>↗</b></footer>
+    <!-- 03 CHANNELS -->
+    <section id="canales" class="channels shell reveal">
+      <div class="section-heading">
+        <h2><span class="thin">elige tu</span> <strong>mercado.</strong></h2>
+      </div>
+
+      <div class="channels-grid">
+        <a class="channel-card xau tilt" href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">
+          <img class="channel-logo" src="assets/affinity-logo.jpg" alt="Affinity">
+          <div class="channel-copy">
+            <span>Affinity Signals</span>
+            <h3>XAUUSD</h3>
+          </div>
+          <div class="channel-chart xau-chart"></div>
+          <div class="channel-cta">ENTRAR A XAUUSD <b>→</b></div>
         </a>
-        <a class="access-card cobalt tilt" href="#" data-needs-link="true">
-          <div class="pill">signals</div><span>affinity signals</span><h3>xauusd</h3><div class="animated-chart chart-blue"></div><footer>ir al canal <b>↗</b></footer>
-        </a>
-        <a id="curso" class="course-card tilt" href="https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/" target="_blank" rel="noopener">
-          <div class="course-copy"><small>curso de trading</small><h3><span class="light">de principiante</span><br><b>a trader rentable</b></h3><div class="price-row"><del>$399 usd</del><strong>$100<small> usd</small></strong><span>pago único</span></div></div>
-          <div class="course-screen"><div class="screen-bars"></div><div class="play">▶</div></div>
-          <footer>acceder al curso en whop <b>↗</b></footer>
+
+        <a class="channel-card synth tilt" href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">
+          <img class="channel-logo" src="assets/affinity-logo.jpg" alt="Affinity">
+          <div class="channel-copy">
+            <span>Affinity Synthetics</span>
+            <h3>Volatility 75</h3>
+          </div>
+          <div class="channel-chart synth-chart"></div>
+          <div class="channel-cta">ENTRAR A SYNTHETICS <b>→</b></div>
         </a>
       </div>
     </section>
 
-    <section id="comunidad" class="shell community reveal">
-      <div class="community-banner">
-        <div><small>affinity</small><h2><span class="light">opera.</span> <b>aprende.</b> <span class="gradient-text">evoluciona.</span></h2></div>
-        <a class="btn primary" href="#canales">entrar a la comunidad <b>↗</b></a>
+    <!-- 04 VISUAL BREAK -->
+    <section class="market-break reveal">
+      <div class="market-break-overlay"></div>
+      <div class="shell market-break-copy">
+        <h2><span>the market never stops.</span><strong>neither do we.</strong></h2>
       </div>
-      <div class="community-grid">
-        <div class="community-chip"><i></i><span>señales</span></div><div class="community-chip"><i></i><span>educación</span></div><div class="community-chip"><i></i><span>xauusd</span></div><div class="community-chip"><i></i><span>volatility 75</span></div>
+      <div class="screen-wall" aria-hidden="true">
+        <div class="screen s1"><div class="mini-chart mc1"></div></div>
+        <div class="screen s2"><div class="mini-chart mc2"></div></div>
+        <div class="screen s3"><div class="mini-chart mc3"></div></div>
+        <div class="screen s4"><div class="mini-chart mc4"></div></div>
+      </div>
+    </section>
+
+    <!-- 05 COURSE -->
+    <section id="curso" class="course shell reveal">
+      <div class="course-intro">
+        <div class="tiny-label">curso affinity trading</div>
+        <h2><span class="thin">de principiante</span><br><strong>a trader rentable</strong></h2>
+        <div class="price">
+          <del>$399 USD</del>
+          <strong>$100 <small>USD</small></strong>
+        </div>
+        <span class="onepay">pago único</span>
+        <a class="btn primary course-btn" href="https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/" target="_blank" rel="noopener">acceder al curso <b>→</b></a>
+      </div>
+
+      <div class="course-levels">
+        <article class="level-card level-blue tilt">
+          <img src="assets/affinity-logo.jpg" alt="">
+          <h3>BÁSICO</h3>
+          <div class="level-chart"></div>
+          <span>01</span>
+        </article>
+        <article class="level-card level-mid tilt">
+          <img src="assets/affinity-logo.jpg" alt="">
+          <h3>INTERMEDIO</h3>
+          <div class="level-chart"></div>
+          <span>02</span>
+        </article>
+        <article class="level-card level-purple tilt">
+          <img src="assets/affinity-logo.jpg" alt="">
+          <h3>AVANZADO</h3>
+          <div class="level-chart"></div>
+          <span>03</span>
+        </article>
+      </div>
+
+      <div class="course-mobile">
+        <div class="course-phone">
+          <img src="assets/affinity-logo.jpg" alt="">
+          <small>curso affinity trading</small>
+          <strong>de principiante<br>a trader rentable</strong>
+          <div class="phone-price"><del>$399</del><b>$100 USD</b></div>
+          <div class="course-mini-card">BÁSICO <span>→</span></div>
+          <div class="course-mini-card">INTERMEDIO <span>→</span></div>
+          <div class="course-mini-card">AVANZADO <span>→</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 WHAT'S INSIDE -->
+    <section class="inside shell reveal">
+      <div class="section-heading">
+        <h2><span class="thin">qué</span> <strong>incluye</strong></h2>
+      </div>
+      <div class="inside-grid">
+        <div class="inside-card"><b>01</b><span>Fundamentos</span></div>
+        <div class="inside-card"><b>02</b><span>Estructura</span></div>
+        <div class="inside-card"><b>03</b><span>Price Action</span></div>
+        <div class="inside-card"><b>04</b><span>Smart Money</span></div>
+        <div class="inside-card"><b>05</b><span>Gestión de riesgo</span></div>
+        <div class="inside-card"><b>06</b><span>Plan operativo</span></div>
+      </div>
+    </section>
+
+    <!-- 07 COMMUNITY -->
+    <section id="comunidad" class="community shell reveal">
+      <div class="community-left">
+        <h2><span class="thin">no operes</span> <strong>solo.</strong></h2>
+        <div class="community-stats">
+          <div><strong>5–6</strong><span>señales promedio / día</span></div>
+          <div><strong>2</strong><span>mercados principales</span></div>
+        </div>
+        <a class="btn secondary community-btn" href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">únete a telegram <b>→</b></a>
+      </div>
+
+      <div class="feed-grid">
+        <article class="feed-card"><small>Affinity Trading</small><b>XAUUSD COMPRA</b><span>Entrada: 2345.25</span><span>SL: 2331.00</span><div class="reaction">✓ señal enviada</div></article>
+        <article class="feed-card"><small>Affinity Trading</small><b>TP1 ✓</b><strong>+45 PIPS</strong><div class="reaction">operación actualizada</div></article>
+        <article class="feed-card"><small>Affinity Trading</small><b>Volatility 75</b><span>setup activo</span><div class="reaction">✓ seguimiento</div></article>
+        <article class="feed-card"><small>Affinity Trading</small><b>TP2 ✓</b><strong>+120 PIPS</strong><div class="reaction">objetivo alcanzado</div></article>
+      </div>
+
+      <div class="community-phone">
+        <div class="cp-top">Affinity Trading</div>
+        <div class="cp-message"><b>XAUUSD COMPRA</b><span>Entrada 2345.25</span></div>
+        <div class="cp-message"><b>TP1 ✓</b><span>+45 PIPS</span></div>
+        <div class="cp-message"><b>Volatility 75</b><span>setup activo</span></div>
+      </div>
+    </section>
+
+    <!-- 08 ECOSYSTEM -->
+    <section class="ecosystem reveal">
+      <div class="shell ecosystem-inner">
+        <div class="ecosystem-title">
+          <h2><span class="thin">one</span><br><strong>ecosystem.</strong></h2>
+        </div>
+        <div class="ecosystem-flow">
+          <div class="eco-card"><span>TRADE</span><b>señales</b></div>
+          <i></i>
+          <div class="eco-card"><span>LEARN</span><b>educación</b></div>
+          <i></i>
+          <div class="eco-card"><span>CONNECT</span><b>comunidad</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 FINAL CTA -->
+    <section class="final-cta reveal">
+      <div class="final-chart left-chart"></div>
+      <div class="final-chart right-chart"></div>
+      <div class="shell final-inner">
+        <img src="assets/affinity-logo.jpg" alt="Affinity">
+        <div>
+          <h2>ready?</h2>
+          <p>entra a <strong>affinity.</strong></p>
+          <div class="final-buttons">
+            <a href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">XAUUSD <b>→</b></a>
+            <a href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">SYNTHETICS <b>→</b></a>
+          </div>
+          <a class="course-inline" href="https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/" target="_blank" rel="noopener">Curso de Trading — $100 USD <b>→</b></a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="shell"><img src="assets/affinity-logo.jpg" alt="Affinity"><span>© 2026 Affinity Trading</span><small>Trading implica riesgo. Resultados pasados no garantizan resultados futuros.</small></div></footer>
-  <div id="toast" class="toast">enlace de XAUUSD pendiente de colocar</div>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <img src="assets/affinity-logo.jpg" alt="Affinity">
+      <span>www.affinitytrading.lat</span>
+      <small>El trading conlleva riesgos. Resultados pasados no garantizan resultados futuros.</small>
+    </div>
+  </footer>
+
+  <!-- fixed channels bubble -->
+  <button class="channel-bubble" id="channelBubble" aria-label="Entrar a canales">
+    <span class="bubble-plane">↗</span>
+    <span>entrar a<br>canales</span>
+  </button>
+
+  <div class="channel-modal" id="channelModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Cerrar">×</button>
+      <img src="assets/affinity-logo.jpg" alt="Affinity">
+      <span>elige tu mercado</span>
+      <a href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">XAUUSD <b>→</b></a>
+      <a href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">SYNTHETICS <b>→</b></a>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
