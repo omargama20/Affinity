@@ -1,170 +1,134 @@
-<!DOCTYPE html>
-<html lang="es" class="dark">
+<!doctype html>
+<html lang="es">
 <head>
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1530406178649000');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=1530406178649000&ev=PageView&noscript=1" />
-  </noscript>
-  <!-- End Meta Pixel Code -->
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Señales de Índices Sintéticos Gratis | Volatility 75 Open by Affinity</title>
-  <meta name="description" content="Accede gratis al canal de señales de índices sintéticos para Volatility 75. Señales, resultados visibles y comunidad Affinity por tiempo limitado." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Affinity Trading</title>
+  <meta name="description" content="Affinity Trading — señales, educación y comunidad.">
+  <meta name="theme-color" content="#03050a">
+  <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#04050a; --cyan:#38c9d3; --blue:#6789c0; --purple:#493585; --lav:#b08dce; --pink:#8f47a9;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;font-family:Inter,sans-serif;background:#04050a;color:white;overflow-x:hidden}
-    body{
-      background:
-        radial-gradient(circle at 8% 0%, rgba(56,201,211,.16), transparent 24%),
-        radial-gradient(circle at 94% 3%, rgba(143,71,169,.22), transparent 30%),
-        radial-gradient(circle at 55% 105%, rgba(103,137,192,.10), transparent 35%),
-        linear-gradient(180deg,#04050a 0%,#060913 58%,#04050a 100%);
-    }
-    .page{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:18px 14px;position:relative}
-    .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(circle at center,black 38%,transparent 85%);opacity:.25;pointer-events:none}
-    .wrap{width:min(100%,1040px);position:relative;z-index:2}
-    .hero{text-align:center;max-width:860px;margin:auto}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.78);box-shadow:0 12px 34px rgba(0,0,0,.22)}
-    .dot{width:7px;height:7px;border-radius:999px;background:var(--cyan);box-shadow:0 0 16px rgba(56,201,211,.65)}
-    h1{margin:18px 0 0;font-size:clamp(2.45rem,8.5vw,5.4rem);line-height:.94;font-weight:900;letter-spacing:-.065em}
-    .grad{background:linear-gradient(135deg,#fff 0%,#dffcff 18%,#38c9d3 38%,#6789c0 58%,#b08dce 78%,#8f47a9 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-    .sub{margin:16px auto 0;max-width:720px;color:rgba(255,255,255,.78);font-size:clamp(.98rem,2.2vw,1.24rem);line-height:1.6;font-weight:600}
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px auto 0;max-width:760px}
-    .stat{border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(12,16,24,.78),rgba(7,9,15,.94));border-radius:18px;padding:15px 10px;box-shadow:0 18px 50px rgba(0,0,0,.28)}
-    .num{font-size:clamp(1.75rem,5.6vw,3.2rem);line-height:1;font-weight:900;letter-spacing:-.055em}
-    .num.cyan{color:var(--cyan);text-shadow:0 0 22px rgba(56,201,211,.22)}
-    .num.blue{color:var(--blue)}
-    .num.pink{color:var(--pink)}
-    .label{margin-top:8px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;font-weight:900;color:rgba(255,255,255,.50)}
-    .urgency{margin:20px 0 0;display:inline-flex;align-items:center;gap:8px;color:var(--cyan);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.18em}
-    .cta-title{margin:10px auto 0;font-size:clamp(1.55rem,5.8vw,3.3rem);font-weight:900;letter-spacing:-.05em;line-height:1}
-    .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:720px;margin:22px auto 0}
-    .cta{position:relative;min-height:78px;border-radius:24px;text-decoration:none;color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 18px;overflow:hidden;font-weight:900;text-transform:uppercase;letter-spacing:.07em;border:1px solid rgba(255,255,255,.18);box-shadow:0 22px 62px rgba(56,201,211,.18),0 22px 62px rgba(143,71,169,.18),inset 0 1px 0 rgba(255,255,255,.12);transition:.22s ease}
-    .cta:hover{transform:translateY(-3px) scale(1.01)}
-    .cta.primary{background:linear-gradient(135deg,#22c7d6 0%,#6789c0 45%,#8f47a9 100%)}
-    .cta.secondary{background:linear-gradient(135deg,rgba(56,201,211,.12),rgba(143,71,169,.25));border-color:rgba(176,141,206,.30)}
-    .cta:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transform:translateX(-130%);animation:shine 3.4s linear infinite}
-    @keyframes shine{to{transform:translateX(130%)}}
-    .tg{width:48px;height:48px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at top left,rgba(255,255,255,.30),transparent 30%),linear-gradient(135deg,#38c9d3,#493585);box-shadow:0 12px 30px rgba(56,201,211,.24);flex-shrink:0;position:relative;z-index:2}
-    .tg svg{width:24px;height:24px}
-    .ctatxt{position:relative;z-index:2;text-align:left;font-size:10px;line-height:1.15}
-    .ctatxt strong{display:block;font-size:clamp(1.05rem,3vw,1.55rem);letter-spacing:.02em;margin-top:3px}
-    .badges{margin:18px auto 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-    .badge{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);border-radius:999px;padding:9px 13px;color:rgba(255,255,255,.68);font-size:11px;font-weight:800}
-    .people{margin:17px auto 0;display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;color:rgba(255,255,255,.68);font-size:13px}
-    .stack{display:flex}.av{width:31px;height:31px;border-radius:999px;display:flex;align-items:center;justify-content:center;margin-left:-7px;border:2px solid #04050a;font-size:11px;font-weight:900}.av:first-child{margin-left:0}
-    .live{margin:12px auto 0;font-size:12px;color:rgba(255,255,255,.58)}.live span{color:var(--cyan);font-weight:900}
-    .testimonials{margin:22px auto 0;max-width:920px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(12,16,24,.72),rgba(7,9,15,.92));border-radius:24px;padding:18px;box-shadow:0 22px 70px rgba(0,0,0,.32)}
-    .test-head{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:900;color:var(--lav)}
-    .test-title{margin:6px 0 14px;font-size:clamp(1.15rem,3.8vw,2rem);font-weight:900;letter-spacing:-.035em}
-    .test-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .card{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);border-radius:18px;padding:15px;text-align:left;min-height:126px}
-    .stars{color:var(--pink);letter-spacing:.18em;font-size:13px}.quote{margin-top:12px;color:rgba(255,255,255,.72);font-size:12px;line-height:1.55}.who{margin-top:13px;font-size:12px;font-weight:900}
-    @media(max-width:740px){
-      .page{align-items:flex-start;padding-top:16px}
-      .stats{gap:8px;margin-top:16px}
-      .stat{border-radius:15px;padding:12px 6px}.label{font-size:7.8px}
-      .cta-grid{grid-template-columns:1fr;gap:10px;margin-top:16px}.cta{min-height:68px;border-radius:20px}
-      .badges{margin-top:12px}.badge{font-size:10px;padding:8px 10px}
-      .testimonials{margin-top:16px;padding:14px;border-radius:20px}
-      .test-row{grid-template-columns:1fr}.card:nth-child(n+3){display:none}
-      .sub{line-height:1.5}.people{font-size:12px}.live{font-size:11px}
-    }
-    @media(max-height:760px) and (max-width:740px){
-      h1{font-size:2.25rem}.sub{font-size:.92rem;margin-top:12px}.stats{margin-top:13px}.num{font-size:1.7rem}.cta-title{font-size:1.35rem}.testimonials{display:none}
-      .badge{padding:7px 9px}.people{margin-top:12px}
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
-    <div class="grid"></div>
-    <section class="wrap hero">
-      <div class="pill"><i class="dot"></i> Señales de Índices Sintéticos Gratis</div>
-      <h1>Señales de Índices<br><span class="grad">Sintéticos Gratis.</span></h1>
-      <p class="sub">Volatility 75 Open by Affinity. Señales gratis, resultados visibles y acceso inmediato por tiempo limitado.</p>
+  <div class="aurora aurora-a"></div><div class="aurora aurora-b"></div>
 
-      <div class="stats">
-        <div class="stat"><div class="num cyan" data-count="41320">+41,320</div><div class="label">Pips acumulados</div></div>
-        <div class="stat"><div class="num blue" data-count="318">318</div><div class="label">Alertas ganadas</div></div>
-        <div class="stat"><div class="num pink" data-count="37">37</div><div class="label">Alertas perdidas</div></div>
+  <nav class="nav">
+    <div class="shell nav-in">
+      <a href="#inicio" class="logo"><img src="assets/affinity-logo.jpg" alt="Affinity"></a>
+      <div class="nav-links">
+        <a href="#inicio">inicio</a><a href="#canales">canales</a><a href="#curso">curso</a><a href="#resultados">resultados</a><a href="#comunidad">comunidad</a>
       </div>
+      <a class="nav-telegram" href="#canales">acceso a telegram <span>↗</span></a>
+    </div>
+  </nav>
 
-      <div class="urgency">⏱ Por tiempo limitado</div>
-      <div class="cta-title">Asegura tu lugar <span class="grad">gratis</span> hoy.</div>
-
-      <div class="cta-grid">
-        <a class="cta primary" href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener noreferrer">
-          <span class="tg"><svg viewBox="0 0 24 24" fill="none"><path d="M20.6 4.2L3.8 10.7c-1.1.4-1.1 1.1-.2 1.4l4.3 1.3 1.7 5.2c.2.6.3.8.7.8.3 0 .5-.1.8-.4l2.1-2 4.4 3.2c.8.4 1.4.2 1.6-.8l2.8-13.4c.3-1.1-.4-1.6-1.4-1.2Z" fill="white"/></svg></span>
-          <span class="ctatxt">Entrar gratis <strong>Volatility 75</strong></span>
-        </a>
-        <a class="cta secondary" href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener noreferrer">
-          <span class="tg"><svg viewBox="0 0 24 24" fill="none"><path d="M20.6 4.2L3.8 10.7c-1.1.4-1.1 1.1-.2 1.4l4.3 1.3 1.7 5.2c.2.6.3.8.7.8.3 0 .5-.1.8-.4l2.1-2 4.4 3.2c.8.4 1.4.2 1.6-.8l2.8-13.4c.3-1.1-.4-1.6-1.4-1.2Z" fill="white"/></svg></span>
-          <span class="ctatxt">También ver <strong>XAUUSD</strong></span>
-        </a>
-      </div>
-
-      <div class="badges">
-        <span class="badge">✅ 100% Gratis</span>
-        <span class="badge">✅ Sin Tarjeta</span>
-        <span class="badge">✅ Acceso Inmediato</span>
-      </div>
-
-      <div class="people">
-        <div class="stack">
-          <span class="av" style="background:#f59e0b">A</span><span class="av" style="background:#ef5da8">C</span><span class="av" style="background:#4f7cff">M</span><span class="av" style="background:#b08dce">G</span><span class="av" style="background:rgba(255,255,255,.06)">+</span>
+  <main>
+    <section id="inicio" class="hero shell reveal">
+      <div class="hero-copy">
+        <div class="overline"><i></i> affinity trading</div>
+        <h1><span class="light">affinity</span><br><span class="bold">trading</span><em>.</em></h1>
+        <div class="hero-tags"><span>educación</span><i></i><span>señales</span><i></i><span>comunidad</span></div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#canales">explorar canales <b>↗</b></a>
+          <a class="btn ghost" href="#resultados">ver resultados <b>⌁</b></a>
         </div>
-        <div><strong style="color:white">+47 personas</strong> se unieron en las últimas 24h</div>
       </div>
-      <div class="live">● El canal está activo <span>AHORA</span>. No esperes a que sea tarde.</div>
 
-      <div class="testimonials">
-        <div class="test-head">Lo que dice la comunidad</div>
-        <div class="test-title">Resultados que <span class="grad">hablan por sí solos.</span></div>
-        <div class="test-row">
-          <div class="card"><div class="stars">★★★★★</div><div class="quote">“Vol 75 ha sido un cambio total para mi operativa. Claridad y resultados reales.”</div><div class="who">Carlos, México ◆</div></div>
-          <div class="card"><div class="stars">★★★★★</div><div class="quote">“Entradas claras y recorridos que sí cumplen. La consistencia del canal es brutal.”</div><div class="who">Mateo, Colombia ◆</div></div>
-          <div class="card"><div class="stars">★★★★★</div><div class="quote">“Entré gratis y me quedé por los resultados. La comunidad está muy activa.”</div><div class="who">Álvaro, España ◆</div></div>
+      <div class="hero-market" aria-label="visual de mercado">
+        <div class="market-label"><span>XAUUSD</span><b>Affinity Market View</b></div>
+        <svg class="candles" viewBox="0 0 820 430" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#695cff" stop-opacity=".22"/><stop offset="1" stop-color="#00c8ff" stop-opacity="0"/></linearGradient>
+            <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#982dff"/><stop offset=".45" stop-color="#5e55ff"/><stop offset="1" stop-color="#00b9ff"/></linearGradient>
+          </defs>
+          <g class="grid"><path d="M0 86H820M0 172H820M0 258H820M0 344H820"/><path d="M136 0V430M272 0V430M408 0V430M544 0V430M680 0V430"/></g>
+          <path class="area" d="M0 344 C60 305,93 367,145 312 S235 275,275 306 S343 241,383 264 S460 214,510 224 S598 176,647 193 S725 128,820 96 L820 430 L0 430Z"/>
+          <path class="trend" d="M0 344 C60 305,93 367,145 312 S235 275,275 306 S343 241,383 264 S460 214,510 224 S598 176,647 193 S725 128,820 96"/>
+          <g id="bars"></g>
+        </svg>
+        <div class="floating-pip float">XAUUSD 1H <b>+342.7 pips</b></div>
+
+        <div class="phone float2">
+          <div class="phone-top"><span>9:39</span><span>● ● ●</span></div>
+          <div class="tg-title"><div class="tg-avatar">A</div><div><b>Affinity Trading</b><small>señales activas</small></div></div>
+          <div class="signal-card">
+            <div class="signal-symbol">XAUUSD <span>COMPRA</span></div>
+            <div class="signal-line"><span>Entrada</span><b>2345.25</b></div>
+            <div class="signal-line"><span>SL</span><b>2333.20</b></div>
+            <div class="signal-line"><span>TP1</span><b>2355.80</b></div>
+            <div class="signal-line"><span>TP2</span><b>2363.40</b></div>
+            <div class="signal-line"><span>TP3</span><b>2375.60</b></div>
+            <div class="score"><span>score</span><b>8.7 / 10</b></div>
+          </div>
+          <div class="phone-brand">Affinity Trading</div>
         </div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="side-card"><span>señales promedio / día</span><strong>5–8</strong><div class="mini-line"></div></div>
+        <div class="side-card"><span>operativa</span><strong>desde marzo</strong><div class="status"><i></i> activa</div></div>
+      </aside>
+    </section>
+
+    <section id="resultados" class="shell results reveal">
+      <div class="section-label">resultados registrados</div>
+      <div class="results-grid">
+        <article class="result-card">
+          <header><span class="orb purple">$</span><div><b>forex & xauusd</b><small>16 mar → 3 abr 2026</small></div></header>
+          <div class="stats">
+            <div><span>señales</span><strong class="counter" data-target="30">0</strong></div>
+            <div><span>ganadas</span><strong class="counter" data-target="29">0</strong><small class="positive">96.7%</small></div>
+            <div><span>perdidas</span><strong class="counter" data-target="1">0</strong><small>3.3%</small></div>
+            <div><span>pips</span><strong class="positive">+8,185</strong></div>
+          </div>
+          <svg class="spark" viewBox="0 0 600 120" preserveAspectRatio="none"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8c38ff" stop-opacity=".28"/><stop offset="1" stop-color="#8c38ff" stop-opacity="0"/></linearGradient></defs><path class="sparkfill" d="M0 105 C50 94,62 80,105 88 S175 65,213 73 S276 42,320 50 S392 26,430 34 S525 17,600 5 L600 120L0 120Z" fill="url(#g1)"/><path d="M0 105 C50 94,62 80,105 88 S175 65,213 73 S276 42,320 50 S392 26,430 34 S525 17,600 5"/></svg>
+        </article>
+        <article class="result-card blue-card">
+          <header><span class="orb blue">↯</span><div><b>sintéticos · volatility 75</b><small>operativa activa desde marzo</small></div></header>
+          <div class="stats synthetic-stats">
+            <div><span>ritmo objetivo</span><strong>5–8</strong><small>setups / día</small></div>
+            <div><span>mercado</span><strong>V75</strong></div>
+            <div><span>sesiones</span><strong>diarias</strong></div>
+            <div><span>estado</span><strong class="active-word">activo</strong></div>
+          </div>
+          <svg class="spark blue-spark" viewBox="0 0 600 120" preserveAspectRatio="none"><defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#008dff" stop-opacity=".25"/><stop offset="1" stop-color="#008dff" stop-opacity="0"/></linearGradient></defs><path class="sparkfill" d="M0 108 C45 90,60 102,92 82 S145 91,177 70 S230 76,267 52 S325 64,360 42 S425 46,463 24 S530 29,600 8 L600 120L0 120Z" fill="url(#g2)"/><path d="M0 108 C45 90,60 102,92 82 S145 91,177 70 S230 76,267 52 S325 64,360 42 S425 46,463 24 S530 29,600 8"/></svg>
+        </article>
+      </div>
+    </section>
+
+    <section id="canales" class="shell access reveal">
+      <div class="section-label">acceso rápido</div>
+      <div class="access-grid">
+        <a class="access-card violet tilt" href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">
+          <div class="pill">opened</div><span>affinity synthetics</span><h3>volatility 75</h3><div class="animated-chart chart-purple"></div><footer>ir al canal <b>↗</b></footer>
+        </a>
+        <a class="access-card cobalt tilt" href="#" data-needs-link="true">
+          <div class="pill">signals</div><span>affinity signals</span><h3>xauusd</h3><div class="animated-chart chart-blue"></div><footer>ir al canal <b>↗</b></footer>
+        </a>
+        <a id="curso" class="course-card tilt" href="https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/" target="_blank" rel="noopener">
+          <div class="course-copy"><small>curso de trading</small><h3><span class="light">de principiante</span><br><b>a trader rentable</b></h3><div class="price-row"><del>$399 usd</del><strong>$100<small> usd</small></strong><span>pago único</span></div></div>
+          <div class="course-screen"><div class="screen-bars"></div><div class="play">▶</div></div>
+          <footer>acceder al curso en whop <b>↗</b></footer>
+        </a>
+      </div>
+    </section>
+
+    <section id="comunidad" class="shell community reveal">
+      <div class="community-banner">
+        <div><small>affinity</small><h2><span class="light">opera.</span> <b>aprende.</b> <span class="gradient-text">evoluciona.</span></h2></div>
+        <a class="btn primary" href="#canales">entrar a la comunidad <b>↗</b></a>
+      </div>
+      <div class="community-grid">
+        <div class="community-chip"><i></i><span>señales</span></div><div class="community-chip"><i></i><span>educación</span></div><div class="community-chip"><i></i><span>xauusd</span></div><div class="community-chip"><i></i><span>volatility 75</span></div>
       </div>
     </section>
   </main>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const ctas = document.querySelectorAll('a[href*="t.me/AlertasDeIndicesSinteticos"], a[href*="t.me/AffinityTradingCom"]');
-      ctas.forEach(function (cta) {
-        cta.addEventListener('click', function () {
-          if (typeof fbq === 'function') {
-            fbq('track', 'Lead', {
-              content_name: cta.textContent.trim(),
-              content_category: 'Telegram Channel Click'
-            });
-          }
-        });
-      });
-    });
-  </script>
-
+  <footer class="footer"><div class="shell"><img src="assets/affinity-logo.jpg" alt="Affinity"><span>© 2026 Affinity Trading</span><small>Trading implica riesgo. Resultados pasados no garantizan resultados futuros.</small></div></footer>
+  <div id="toast" class="toast">enlace de XAUUSD pendiente de colocar</div>
+  <script src="script.js"></script>
 </body>
 </html>
