@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>Affinity Trading</title>
   <meta name="description" content="Affinity Trading — señales, educación y comunidad.">
-  <meta name="theme-color" content="#f5f6fb">
+  <meta name="theme-color" content="#f7f8fc">
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,243 +13,241 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#inicio"><img src="assets/affinity-logo.jpg" alt="Affinity Trading"></a>
-      <nav class="desktop-nav">
-        <a href="#resultados">Resultados</a>
-        <a href="#canales">Canales</a>
-        <a href="#curso">Curso</a>
-        <a href="#comunidad">Comunidad</a>
-      </nav>
-      <a class="nav-cta" href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">Entrar a canales</a>
-      <button class="menu-btn" aria-label="Abrir menú">☰</button>
-    </div>
-    <div class="mobile-nav">
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#inicio"><img src="assets/affinity-logo-transparent.png" alt="Affinity Trading"></a>
+    <nav class="desktop-nav">
+      <a href="#beneficios">Beneficios</a>
       <a href="#resultados">Resultados</a>
       <a href="#canales">Canales</a>
       <a href="#curso">Curso</a>
-      <a href="#comunidad">Comunidad</a>
+    </nav>
+    <a class="nav-cta" href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">Quiero entrar ahora</a>
+    <button class="menu-btn" aria-label="Abrir menú">☰</button>
+  </div>
+  <div class="mobile-nav">
+    <a href="#beneficios">Beneficios</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#canales">Canales</a>
+    <a href="#curso">Curso</a>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="hero container">
+    <div class="hero-copy">
+      <div class="eyebrow">SEÑALES · EDUCACIÓN · COMUNIDAD</div>
+      <h1>Señales listas para operar.<br><span>Curso, comunidad y ejecución en un solo lugar.</span></h1>
+      <p>Si quieres dejar de operar a ciegas, Affinity te da entradas claras, objetivos definidos y una comunidad que te ayuda a crecer.</p>
+      <div class="hero-bullets">
+        <div>✓ Señales en tiempo real para XAUUSD</div>
+        <div>✓ Canal de Synthetics gratis</div>
+        <div>✓ Curso completo por solo $100 USD</div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">Entrar a canales</a>
+        <a class="btn btn-secondary" href="#curso">Ver curso</a>
+      </div>
+      <div class="micro-proof">
+        <div class="proof-pill"><b>346</b><span>alertas XAUUSD</span></div>
+        <div class="proof-pill"><b>251</b><span>positivas</span></div>
+        <div class="proof-pill"><b>72.5%</b><span>rentabilidad</span></div>
+      </div>
+      <div class="hero-note">Empieza hoy mismo: recibe señales, aprende el método y únete a una comunidad real.</div>
     </div>
-  </header>
 
-  <main>
-    <section id="inicio" class="hero container">
-      <div class="hero-copy">
-        <div class="eyebrow">SEÑALES · EDUCACIÓN · COMUNIDAD</div>
-        <h1>Trading con estructura.<br><span>Señales que sí venden resultados.</span></h1>
-        <p>Operamos con precisión, gestionamos el riesgo y compartimos cada oportunidad en tiempo real.</p>
-        <ul class="hero-points">
-          <li>Señales precisas en tiempo real</li>
-          <li>Estrategias probadas y backtesteadas</li>
-          <li>Comunidad activa y soporte constante</li>
-        </ul>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">Entrar a canales</a>
-          <a class="btn btn-secondary" href="#curso">Ver curso</a>
+    <div class="hero-visual">
+      <div class="phone-mock">
+        <div class="phone-top"><span>9:39</span><span>Affinity Signals</span><span>⋯</span></div>
+        <div class="phone-signal">
+          <small>XAUUSD</small>
+          <strong>COMPRA</strong>
+          <div><span>Entrada</span><b>2318.50</b></div>
+          <div><span>TP1</span><b>2328.50</b></div>
+          <div><span>TP2</span><b>2338.50</b></div>
+          <div><span>SL</span><b>2308.00</b></div>
+          <button>Operar ahora</button>
         </div>
-        <div class="hero-proof">
-          <div class="avatars">
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
+      </div>
+      <div class="visual-stack">
+        <article class="card card-large">
+          <div class="card-title"><strong>XAUUSD</strong><small>Gold / U.S. Dollar</small></div>
+          <div class="price-row"><b>2,318.75</b><span>+0.81%</span></div>
+          <svg viewBox="0 0 340 160" preserveAspectRatio="none" class="linechart">
+            <g stroke="#e9edf5" stroke-width="1"><path d="M0 32H340M0 64H340M0 96H340M0 128H340"></path></g>
+            <path d="M14 120 C44 130 62 112 90 100 S138 98 160 84 S212 76 236 66 S284 46 326 38" fill="none" stroke="#4f86ff" stroke-width="3" stroke-linecap="round"></path>
+            <g id="heroCandles"></g>
+          </svg>
+        </article>
+        <div class="cards-row">
+          <article class="card metric"><small>Rentabilidad</small><b>+72.5%</b></article>
+          <article class="card metric"><small>Operaciones</small><b>251</b></article>
+          <article class="card metric"><small>Positivas</small><b>72.5%</b></article>
+        </div>
+        <article class="card offer-card">
           <div>
-            <div class="stars">★★★★★</div>
-            <small>+2,500 traders confían en Affinity. Resultados reales. Comunidad real.</small>
+            <small>OFERTA ACTIVA</small>
+            <strong>Curso Affinity Trading</strong>
+            <p>Accede hoy por <b>$100 USD</b> pago único.</p>
           </div>
-        </div>
+          <a href="#curso">Ver oferta</a>
+        </article>
       </div>
-      <div class="hero-visual">
-        <div class="phone-mock">
-          <div class="phone-head">
-            <span>9:39</span><span>Affinity Signals</span><span>⋯</span>
-          </div>
-          <div class="signal-box">
-            <strong>XAUUSD</strong>
-            <span class="buy">COMPRA</span>
-            <div><span>Entrada:</span><b>2318.50</b></div>
-            <div><span>TP1:</span><b>2328.50</b></div>
-            <div><span>TP2:</span><b>2338.50</b></div>
-            <div><span>SL:</span><b>2308.00</b></div>
-            <div><span>RR:</span><b>1:2 / 1:4</b></div>
-            <small>Gestión del riesgo: 1-2%</small>
-            <button>Ver en gráfico</button>
-          </div>
-        </div>
-        <div class="side-stack">
-          <article class="mini-card chart-card">
-            <div class="mini-head"><strong>XAUUSD</strong><small>Gold / U.S. Dollar</small></div>
-            <div class="price-line"><b>2,318.75</b><span>+0.81%</span></div>
-            <svg viewBox="0 0 320 160" class="candles" preserveAspectRatio="none">
-              <g stroke="#E7EAF1" stroke-width="1"><path d="M0 32H320M0 64H320M0 96H320M0 128H320"></path></g>
-              <g id="candleChart"></g>
-            </svg>
-            <div class="tabs">1D · 5D · 1M · 3M · 6M · 1Y</div>
-          </article>
-          <div class="metrics-mini">
-            <article class="mini-card"><small>Rentabilidad</small><b>+72.5%</b></article>
-            <article class="mini-card"><small>Operaciones</small><b>251</b></article>
-            <article class="mini-card"><small>Positivas</small><b>72.5%</b></article>
-          </div>
-          <article class="mini-card donut-card">
-            <div class="donut"></div>
-            <div class="donut-legend">
-              <div><span class="dot blue"></span> Positivas <b>251</b></div>
-              <div><span class="dot red"></span> Otras <b>95</b></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="resultados" class="container stats-band-wrap">
-      <div class="stats-band">
-        <div class="stat-item"><strong>346</strong><span>alertas XAUUSD</span></div>
-        <div class="stat-item"><strong>251</strong><span>positivas</span></div>
-        <div class="stat-item"><strong>72.5%</strong><span>positivas</span></div>
-        <div class="stat-item"><strong>878</strong><span>alertas V75</span></div>
-        <div class="stat-item"><strong>827</strong><span>positivas</span></div>
-        <div class="stat-item"><strong>94.2%</strong><span>positivas</span></div>
-      </div>
-    </section>
-
-    <section id="canales" class="container channels-grid">
-      <article class="market-panel">
-        <div class="market-copy">
-          <div class="market-title">Affinity Signals — XAUUSD</div>
-          <p>Señales profesionales en el mercado más líquido del mundo.</p>
-          <ul>
-            <li>Análisis técnico + estructura institucional</li>
-            <li>Señales con entradas, targets y stop loss</li>
-            <li>Gestión de riesgo integrada</li>
-            <li>Resultados transparentes y auditables</li>
-          </ul>
-          <a class="btn btn-primary slim" href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">Entrar al canal XAUUSD</a>
-        </div>
-        <div class="market-visual">
-          <div class="panel-chart">
-            <div class="panel-label"><strong>XAUUSD</strong><small>Gold / U.S. Dollar</small></div>
-            <svg viewBox="0 0 360 220" preserveAspectRatio="none">
-              <defs><linearGradient id="lineBlue" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2E7BFF"/><stop offset="1" stop-color="#5F52FF"/></linearGradient></defs>
-              <g stroke="#EBEEF5" stroke-width="1"><path d="M0 44H360M0 88H360M0 132H360M0 176H360"></path></g>
-              <path d="M20 168 C60 158 76 180 110 152 S162 140 194 124 S238 116 268 90 S320 76 340 54" fill="none" stroke="url(#lineBlue)" stroke-width="3" stroke-linecap="round"></path>
-            </svg>
-          </div>
-        </div>
+  <section id="beneficios" class="benefits container">
+    <div class="section-head center">
+      <div class="eyebrow soft">¿POR QUÉ AFFINITY?</div>
+      <h2>No solo son señales.<br><span>Es un sistema completo para venderte claridad y resultados.</span></h2>
+    </div>
+    <div class="benefits-grid">
+      <article>
+        <div class="ico">⏱</div>
+        <h3>Señales en tiempo real</h3>
+        <p>Recibe entradas, stops y targets listos para ejecutar sin perder tiempo analizando desde cero.</p>
       </article>
-
-      <article class="market-panel alt">
-        <div class="market-copy">
-          <div class="pill green">ACCESO GRATUITO</div>
-          <div class="market-title">Affinity Synthetics — Volatility 75</div>
-          <p>Opera el mercado sintético más volátil con nuestras señales en tiempo real.</p>
-          <ul>
-            <li>Señales para Volatility 75 (V75)</li>
-            <li>Alta frecuencia, alta precisión</li>
-            <li>Resultados históricos comprobados</li>
-            <li>Comunidad y soporte dedicados</li>
-          </ul>
-          <a class="btn btn-gradient slim" href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">Entrar gratis</a>
-        </div>
-        <div class="market-visual">
-          <div class="panel-chart">
-            <div class="panel-label"><strong>Volatility 75 (1s)</strong><small>Índice Sintético</small></div>
-            <svg viewBox="0 0 360 220" preserveAspectRatio="none">
-              <defs><linearGradient id="lineVio" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2AAE98"/><stop offset="1" stop-color="#6F52FF"/></linearGradient></defs>
-              <g stroke="#EBEEF5" stroke-width="1"><path d="M0 44H360M0 88H360M0 132H360M0 176H360"></path></g>
-              <path d="M20 150 C54 170 83 188 118 152 S171 148 205 126 S260 116 294 84 S326 102 340 86" fill="none" stroke="url(#lineVio)" stroke-width="3" stroke-linecap="round"></path>
-            </svg>
-            <div class="panel-kpis"><span><b>+94.2%</b> Rentabilidad</span><span><b>827</b> Operaciones</span><span><b>94.2%</b> Positivas</span></div>
-          </div>
-        </div>
+      <article>
+        <div class="ico">⚙</div>
+        <h3>Gestión y estructura</h3>
+        <p>No se trata solo de entrar, sino de hacerlo con criterio, riesgo controlado y método.</p>
       </article>
-    </section>
+      <article>
+        <div class="ico">📚</div>
+        <h3>Curso paso a paso</h3>
+        <p>Aprende a operar por tu cuenta con una formación diseñada para principiantes y traders en evolución.</p>
+      </article>
+      <article>
+        <div class="ico">🟢</div>
+        <h3>Synthetics gratis</h3>
+        <p>Accede al canal de Volatility 75 sin costo y empieza a probar otro mercado con el respaldo de Affinity.</p>
+      </article>
+    </div>
+  </section>
 
-    <section id="curso" class="container course-section">
-      <div class="course-copy">
-        <div class="eyebrow lilac">FORMACIÓN COMPLETA</div>
-        <h2>De principiante<br><span>a trader rentable.</span></h2>
-        <p>Aprende desde cero o lleva tu trading al siguiente nivel con nuestro curso completo y estructurado.</p>
-        <div class="course-features">
-          <div>+18 horas de contenido</div>
-          <div>Estrategias probadas</div>
-          <div>Lecciones paso a paso</div>
-          <div>Métodos con resultados</div>
-          <div>Acceso de por vida</div>
-          <div>Comunidad privada</div>
-        </div>
-        <div class="price-row"><del>$399 USD</del><strong>$100 USD</strong><span>PAGO ÚNICO</span></div>
-        <a class="btn btn-gradient wide" href="https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/" target="_blank" rel="noopener">Comprar en Whop</a>
-      </div>
-      <div class="course-media">
-        <img src="assets/course-whop.png" alt="Curso de Trading Affinity">
-      </div>
-    </section>
+  <section id="resultados" class="container stats-wrap">
+    <div class="stats-band">
+      <div class="stat"><strong>346</strong><span>alertas XAUUSD</span></div>
+      <div class="stat"><strong>251</strong><span>positivas</span></div>
+      <div class="stat"><strong>72.5%</strong><span>positivas</span></div>
+      <div class="stat"><strong>878</strong><span>alertas V75</span></div>
+      <div class="stat"><strong>827</strong><span>positivas</span></div>
+      <div class="stat"><strong>94.2%</strong><span>positivas</span></div>
+    </div>
+  </section>
 
-    <section id="comunidad" class="container ecosystem-section">
-      <h2>Todo lo que necesitas para operar con ventaja.</h2>
-      <div class="ecosystem-grid">
-        <article>
-          <div class="icon">⟳</div>
-          <h3>Trade</h3>
-          <p>Señales precisas y oportunas en los mercados más líquidos y volátiles.</p>
-          <ul><li>XAUUSD con alta probabilidad</li><li>Volatility 75 gratis</li><li>Resultados transparentes</li></ul>
-        </article>
-        <article>
-          <div class="icon">▤</div>
-          <h3>Learn</h3>
-          <p>Formación estructurada para que entiendas el mercado y mejores cada día.</p>
-          <ul><li>Curso completo paso a paso</li><li>Estrategias institucionales</li><li>Acceso de por vida</li></ul>
-        </article>
-        <article>
-          <div class="icon">◌</div>
-          <h3>Connect</h3>
-          <p>Únete a una comunidad de traders reales que comparten y crecen juntos.</p>
-          <ul><li>Comunidad activa</li><li>Soporte constante</li><li>Networking de calidad</li></ul>
-        </article>
+  <section id="canales" class="container sales-sections">
+    <article class="sales-panel">
+      <div class="sales-copy">
+        <div class="eyebrow soft">CANAL PREMIUM</div>
+        <h2>Señales XAUUSD.<br><span>Claras, rápidas y accionables.</span></h2>
+        <p>Si operas oro, aquí tienes una ventaja: entradas puntuales, targets definidos y una operativa pensada para traders que sí quieren ejecutar.</p>
+        <ul>
+          <li>Entradas con estructura</li>
+          <li>Targets y stop loss definidos</li>
+          <li>Alta frecuencia de oportunidades</li>
+          <li>Seguimiento de las operaciones</li>
+        </ul>
+        <a class="btn btn-primary slim" href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">Quiero las señales de XAUUSD</a>
       </div>
-    </section>
-
-    <section class="cta-ribbon">
-      <div class="container cta-ribbon-inner">
-        <div class="ribbon-copy">
-          <h2>Todo lo que necesitas para tu trading,<br>en un solo lugar.</h2>
-        </div>
-        <div class="ribbon-actions">
-          <a href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">Señales XAUUSD</a>
-          <a href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">Synthetics gratis</a>
-          <a href="https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/" target="_blank" rel="noopener">Curso completo</a>
+      <div class="sales-card">
+        <div class="inner-card">
+          <small>Señal destacada</small>
+          <strong>XAUUSD BUY</strong>
+          <div class="rows"><span>Entrada</span><b>2318.50</b></div>
+          <div class="rows"><span>TP1</span><b>2328.50</b></div>
+          <div class="rows"><span>TP2</span><b>2338.50</b></div>
+          <div class="rows"><span>SL</span><b>2308.00</b></div>
+          <div class="cta-chip">+72.5% positivas</div>
         </div>
       </div>
-    </section>
+    </article>
+
+    <article class="sales-panel alt">
+      <div class="sales-card green-zone">
+        <div class="free-banner">ACCESO GRATUITO</div>
+        <div class="chart-box">
+          <strong>Volatility 75</strong>
+          <small>Comunidad + señales gratis</small>
+          <svg viewBox="0 0 360 180" preserveAspectRatio="none">
+            <path d="M10 142 C42 130 64 160 96 146 S140 116 178 106 S220 84 254 70 S300 90 344 42" fill="none" stroke="#18c092" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+          <div class="green-kpis"><span><b>878</b> alertas</span><span><b>827</b> positivas</span><span><b>94.2%</b> win</span></div>
+        </div>
+      </div>
+      <div class="sales-copy">
+        <div class="eyebrow soft green">CANAL GRATIS</div>
+        <h2>Synthetics V75.<br><span>Entra hoy sin pagar.</span></h2>
+        <p>Accede al canal gratuito de índices sintéticos y empieza a explorar un mercado dinámico con señales y acompañamiento de Affinity.</p>
+        <ul>
+          <li>Acceso totalmente gratis</li>
+          <li>Señales para Volatility 75</li>
+          <li>Ideal para probar otra operativa</li>
+          <li>Respaldado por la comunidad</li>
+        </ul>
+        <a class="btn btn-green slim" href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">Entrar gratis a Synthetics</a>
+      </div>
+    </article>
+  </section>
+
+  <section id="curso" class="container course-block">
+    <div class="course-copy">
+      <div class="eyebrow soft">OFERTA DEL CURSO</div>
+      <h2>Aprende a operar.<br><span>Sin depender siempre de otros.</span></h2>
+      <p>Con el curso de Affinity Trading puedes desarrollar criterio, entender la estructura del mercado y mejorar tu ejecución con un método paso a paso.</p>
+      <div class="course-list">
+        <div>Fundamentos y estructura</div>
+        <div>Gestión del riesgo</div>
+        <div>Smart Money Concepts</div>
+        <div>Clases organizadas por nivel</div>
+        <div>Acceso de por vida</div>
+        <div>Curso en plataforma Whop</div>
+      </div>
+      <div class="offer-box">
+        <del>$399 USD</del>
+        <strong>$100 USD</strong>
+        <span>PAGO ÚNICO · PROMO</span>
+      </div>
+      <a class="btn btn-gradient" href="https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/" target="_blank" rel="noopener">Comprar el curso ahora</a>
+    </div>
+    <div class="course-media"><img src="assets/course-whop.png" alt="Curso Affinity Trading en Whop"></div>
+  </section>
+
+  <section class="container final-cta-box">
+    <div class="final-copy">
+      <div class="eyebrow soft">EMPIEZA HOY</div>
+      <h2>Elige tu siguiente paso.</h2>
+      <p>Recibe señales, accede gratis a Synthetics o entra al curso y aprende la estrategia completa.</p>
+    </div>
+    <div class="final-actions">
+      <a href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">Señales XAUUSD</a>
+      <a href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">Synthetics gratis</a>
+      <a href="https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/" target="_blank" rel="noopener">Curso por $100</a>
+    </div>
+  </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand"><img src="assets/affinity-logo.jpg" alt="Affinity Trading"></div>
-      <div class="footer-center">
-        <p>Afíliate. Aprende. Conéctate. Opera con ventaja.</p>
-        <small>© 2026 Affinity Trading. Todos los derechos reservados.</small>
-      </div>
-      <div class="footer-links">
-        <a href="#">Términos y Condiciones</a>
-        <a href="#">Política de Privacidad</a>
-      </div>
-    </div>
-  </footer>
-
-  <button class="floating-channels" id="openChannels" aria-label="Abrir canales">
-    <span>✈</span>
-  </button>
-  <div class="channel-sheet" id="channelSheet" aria-hidden="true">
-    <button class="sheet-backdrop" aria-label="Cerrar"></button>
-    <div class="sheet-card">
-      <button class="sheet-close" aria-label="Cerrar">×</button>
-      <small>CANALES AFFINITY</small>
-      <a href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">XAUUSD <b>↗</b></a>
-      <a href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">Synthetics gratis <b>↗</b></a>
-      <a href="https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/" target="_blank" rel="noopener">Curso en Whop <b>↗</b></a>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <img src="assets/affinity-logo-transparent.png" alt="Affinity Trading">
+    <div>
+      <p>Señales. Educación. Comunidad.</p>
+      <small>© 2026 Affinity Trading. El trading conlleva riesgos. Resultados pasados no garantizan resultados futuros.</small>
     </div>
   </div>
-  <script src="script.js"></script>
+</footer>
+
+<button class="floating-btn" id="openChannels" aria-label="Abrir canales">↗</button>
+<div class="sheet" id="sheet" aria-hidden="true">
+  <button class="backdrop" aria-label="Cerrar"></button>
+  <div class="sheet-card">
+    <button class="close" aria-label="Cerrar">×</button>
+    <small>ACCESOS RÁPIDOS</small>
+    <a href="https://t.me/AffinityTradingCom" target="_blank" rel="noopener">Canal XAUUSD <b>↗</b></a>
+    <a href="https://t.me/AlertasDeIndicesSinteticos" target="_blank" rel="noopener">Synthetics gratis <b>↗</b></a>
+    <a href="https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/" target="_blank" rel="noopener">Curso en Whop <b>↗</b></a>
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

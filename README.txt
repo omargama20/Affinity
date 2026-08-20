@@ -1,20 +1,13 @@
-AFFINITY TRADING — SALES PACK
+AFFINITY TRADING — SALES PACK V2
 
-Listo para GitHub Pages.
+Cambios principales:
+- Diseño más vendedor / más orientado a conversión
+- Logo transparente en header y footer
+- Hero más fuerte y orientado a CTA
+- Beneficios comerciales más claros
+- XAUUSD premium + Synthetics gratis + Curso
 
-Enlaces usados:
-- XAUUSD: https://t.me/AffinityTradingCom
-- Synthetics gratis: https://t.me/AlertasDeIndicesSinteticos
-- Curso Whop: https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/
-
-Resultados mostrados:
-- XAUUSD: 346 alertas / 251 positivas / 72.5%
-- V75: 878 alertas / 827 positivas / 94.2%
-
-Incluye:
-- index.html
-- styles.css
-- script.js
-- assets/
-- responsive mobile
-- burbuja fija de canales
+Enlaces:
+XAUUSD: https://t.me/AffinityTradingCom
+Synthetics gratis: https://t.me/AlertasDeIndicesSinteticos
+Curso: https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/
