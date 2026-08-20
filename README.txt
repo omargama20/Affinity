@@ -1,20 +1,15 @@
-AFFINITY TRADING — VERSION FINAL GITHUB
+AFFINITY TRADING — CLEAN FINAL
 
-Sube TODO el contenido de esta carpeta a la raíz del repositorio.
+Sube todo el contenido de esta carpeta a la raíz de tu repositorio de GitHub Pages.
 
-Enlaces ya configurados:
-- XAUUSD / Affinity Trading: https://t.me/AffinityTradingCom
-- Synthetics: https://t.me/AlertasDeIndicesSinteticos
-- Curso Whop: https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/
+Configurado:
+XAUUSD: https://t.me/AffinityTradingCom
+Synthetics GRATIS: https://t.me/AlertasDeIndicesSinteticos
+Curso Whop: https://whop.com/joined/affinity-trading/products/curso-de-trading-f0/
 
-La página es responsive y cuenta con:
-- menú móvil
-- layout adaptado a celular
-- botón/burbuja fija "entrar a canales" en toda la página
-- modal de selección de canal
-- cards y animaciones sin librerías externas
-- Open Sans Light / Bold
-- logo real de Affinity
+Resultados mostrados:
+XAUUSD: 346 alertas / 251 positivas / 72.5%
+V75: 878 alertas / 827 positivas / 94.2%
 
-Dominio previsto:
-www.affinitytrading.lat
+Responsive:
+Sí, incluye versión móvil, menú móvil y burbuja fija de canales.
